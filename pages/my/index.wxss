@@ -1,0 +1,207 @@
+@import "/template/login/index.wxss";
+
+.my-container{
+  background: rgba(249, 249, 249, 1);
+}
+.head{
+  height: 270rpx;
+  padding: 90rpx 30rpx 0 30rpx;
+  background: linear-gradient(0deg, #FC7431 0%, #FF9147 100%);
+  box-sizing: border-box;
+  position: relative;
+}
+.head .ma{
+  display: flex;
+  height: 88rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+.head .ma .left{
+  display: flex;
+}
+.head .ma .left image{
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+  background: #fff;
+}
+.head .ma .left view:nth-child(2){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.head .ma .right{
+  padding: 0 27rpx;
+  margin-right: -30rpx;
+  background: #FF9B63;
+  height: 60rpx;
+  border-radius: 30rpx 0 0 30rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 60rpx;
+}
+.head .main{
+  width: 690rpx;
+  border-radius: 30rpx;
+  background: #fff;
+  margin: 30rpx 0;
+  padding: 30rpx 38rpx 30rpx 46rpx;
+  box-sizing: border-box;
+}
+.head .main .li{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 25rpx;
+}
+.head .main .item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.head .main .item view:nth-child(1){
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+}
+.head .main .item view:nth-child(2){
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.my-container .page-list{
+  margin-top: 260rpx;
+  border-radius: 30rpx;
+  background: #fff;
+  padding: 65rpx 30rpx;
+  width: 690rpx;
+  box-sizing: border-box;
+  margin-left: 30rpx;
+}
+.my-container .page-list .item{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 65rpx;
+}:last-child{
+  margin-bottom: 0 !important;
+}
+.my-container .page-list .item .left{
+  display: flex;
+  align-items: center;
+}
+/* .my-container .page-list .item .left view:nth-child(1){
+  font-size: 24rpx;
+  color: #FC7431;
+  margin-right: 22rpx;
+} */
+.my-container .page-list .item .left image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 22rpx;
+}
+.my-container .page-list .item .left view:nth-child(2){
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+.my-container .page-list .item .rigth view{
+  color: #666;
+}
+.my-container .bot{
+  padding: 0 30rpx;
+  margin-top: 60rpx;
+}
+.my-container .bot .btn{
+  width: 690rpx;
+  height: 88rpx;
+  border: 1px solid #CCCCCC;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 88rpx;
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+  margin-bottom: 90rpx;
+}
+.my-container .bot .tip{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.my-container .bot .tip .top{
+  display: flex;
+  margin-bottom: 10rpx;
+}
+.my-container .bot .tip .top view:nth-child(1){
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.my-container .bot .tip .top view:nth-child(2){
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #3195FC;
+}
+.my-container .bot .tip .tim{
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+  margin-right: 20rpx;
+}
+.my-container  .pop-wrap{
+  width: 600rpx;
+  height: 240rpx;
+  padding-top: 80rpx;
+  border-radius: 30rpx;
+}
+.my-container  .pop-wrap .txt{
+  padding: 0 122rpx;
+  display: flex;
+  justify-content: center;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+  line-height: 48rpx;
+}
+.my-container  .pop-wrap .bots{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  height: 88rpx;
+}
+.my-container  .pop-wrap .bots view{
+  flex: 0 0 50%;
+  text-align: center;
+  line-height: 88rpx;
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+}
+.my-container  .pop-wrap .bots view:nth-child(1){
+  color: #FC7431;
+  border-top: 1px solid #FC7431;
+}
+.my-container  .pop-wrap .bots view:nth-child(2){
+  color: #fff;
+  background: #FC7431;
+}

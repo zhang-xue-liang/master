@@ -1,0 +1,5 @@
+<view class="goodAction-warp">
+  <view class="bfont icon-cart cart"></view>
+  <view bindtap="buyNow" class="buynow">立即购买</view>
+  <view bindtap="addCart" class="addcart">加入购物车</view>
+</view>

@@ -1,0 +1,8 @@
+<view class="goodImg-warp">
+  <view class="title">
+    <view bindtap="changeGoodImg" data-flag="{{true}}" class='left {{ tabActive ? "active" : "" }}'>商品详情</view>
+    <view bindtap="changeGoodImg" data-flag="{{false}}" class='right {{ !tabActive ? "active" : "" }}'>商品规格</view>
+  </view>
+  <rich-text wx:if="{{tabActive}}" nodes="{{desc}}" style="width:100%;height:100%"></rich-text>
+  <image wx:else class="pic" src="{{goodInfo.imageaddrsmall}}"></image>
+</view>

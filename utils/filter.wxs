@@ -1,0 +1,161 @@
+var getDates =  function (time, splitStr) {
+  console.log(time)
+  if (!time) return '';
+  var times = parseInt(time.replace("/Date(", "").replace(")/", ""));
+  var date = getDate(times);
+  var M = date.getMonth() + 1;
+  var y = date.getFullYear();
+  var d = date.getDate();
+  if (M < 10) M = "0" + M;
+  if (d < 10) d = "0" + d;
+  
+  if (splitStr)
+      return y +splitStr + M +splitStr+d;
+  else
+      return {
+      y: y,
+      M: M,
+      d: d
+      };
+}
+// 工单列表接受状态
+var orderListAcceptFilter = function (index) {
+  var a
+  switch (index) {
+    case 0:
+        a = '待接受'
+        break;
+    case 1:
+        a = '已接受'
+        break;
+    case 2:
+        a = '进行中'
+        break;
+    case 3:
+        a = '待审核'
+        break;
+    case 4:
+      a = '待评价'
+      break;
+    case 5:
+      a = '完成'
+      break;
+        break;
+  }
+  return a;
+}
+// 工单详情接受状态
+var workerAcceptTypeFilter = function (index) {
+  var a
+  switch (index) {
+    case 0:
+        a = '待接受'
+        break;
+    case 1:
+        a = '已接受'
+        break;
+    case 2:
+        a = '进行中'
+        break;
+    case 3:
+        a = '完成'
+        break;
+        break;
+  }
+  return a;
+}
+// 工单详情 => 工单类型
+var serviceType = function (index) {
+  var a
+  switch (index) {
+    case 0:
+      a = '安装服务'
+      break;
+    case 1:
+      a = '维修服务'
+      break;
+        break;
+  }
+  return a;
+}
+// 工单详情 => 服务类型
+var serviceContent = function (index) {
+  var a
+  switch (index) {
+    case 0:
+      a = '保内免费'
+    break;
+    case 1:
+      a = '保内收费'
+    break;
+    case 2:
+      a = '保外免费'
+    break;
+    case 3:
+      a = '保外收费'
+    break;
+    break;
+  }
+  return a;
+}
+// 钱包收入记录
+var incomeTypeFilter = function (index) {
+  var a
+  switch (index) {
+    case '1':
+        a = '已结算'
+        break;
+        break;
+  }
+  return a;
+}
+// 钱包提现记录状态
+var withdrawalTypeFilter = function (index) {
+  var a
+  switch (index) {
+    case '1':
+      a = '提现中'
+      break;
+    case '2':
+      a = '已到账'
+      break;
+        break;
+  }
+  return a;
+}
+// 我的 工单记录结算状态
+var gdRecordFilter = function (index) {
+  var a
+  switch (index) {
+    case '0':
+      a = '待接受'
+      break;
+    case '1':
+      a = '已接受'
+      break;
+    case '2':
+      a = '进行中'
+      break;
+      case '3':
+      a = '待审核'
+      break;
+      case '4':
+      a = '待评价'
+      break;
+      case '5':
+      a = '完成'
+      break;
+        break;
+  }
+  return a;
+}
+module.exports = {
+  getDates: getDates,
+  workerAcceptTypeFilter:workerAcceptTypeFilter,
+  orderListAcceptFilter: orderListAcceptFilter,
+  incomeTypeFilter: incomeTypeFilter,
+  withdrawalTypeFilter: withdrawalTypeFilter,
+  gdRecordFilter: gdRecordFilter,
+  serviceContent: serviceContent,
+  serviceType: serviceType
+}

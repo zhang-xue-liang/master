@@ -1,0 +1,44 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="withdrawal">
+  <view class="main">
+    <view class="head">
+      <view class="top">
+        <view>{{availableAmount===''?0:availableAmount}}</view>
+        <view>元</view>
+      </view>
+      <view class="bot">提现到微信钱包</view>
+    </view>
+    <view class="form">
+      <view class="item">
+        <view class="tit">提现金额</view>
+        <view class="bot">
+          <input type="text" model:value="{{amount}}" placeholder="请输入提现金额"/>
+          <view class="txt" bindtap="handleAll">全部</view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="tit">提现微信号</view>
+        <view class="bot">
+          <input type="text" placeholder="获取绑定微信"/>
+        </view>
+      </view>
+      <view class="item">
+        <view class="tit">提现人姓名</view>
+        <view class="bot">
+          <input type="text" placeholder="输入姓名"/>
+        </view>
+      </view>
+      <view class="item">
+        <view class="tit">提现人手机号</view>
+        <view class="bot">
+          <input type="text" placeholder="输入手机号"/>
+        </view>
+      </view>
+      <view class="btn" bindtap="withdrawalNow">立即提现</view>
+    </view>
+  </view>
+  <view class="tip">
+    <view class="bfont icon-tip"></view>
+    <view>不支持给非实名用户打款。若未实名认证，请先完成微信实名认证</view>
+  </view>
+</view>

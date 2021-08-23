@@ -1,0 +1,23 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="certification">
+  <view class="main">
+    <view class="item" wx:if="{{id===0}}">
+      <image src="../../images/weirenzhneg.png"></image>
+      <view class="title">未认证</view>
+      <view class="tip">必须要先完成认证，才能进行更多操作，快去认证吧~~</view>
+      <view class="btn" bindtap="toReg">去认证</view>
+    </view>
+    <view class="item" wx:if="{{id===1}}">
+      <image src="../../images/dengdai.png"></image>
+      <view class="title">审核中</view>
+      <view class="tip">请耐心等待，管理人在加紧审核了~</view>
+      <view class="btn" bindtap="shuxin">刷新</view>
+    </view>
+    <view class="item" wx:if="{{id===3}}">
+      <image src="../../images/shibai.png"></image>
+      <view class="title">认证失败</view>
+      <view class="tip">照片不清晰，无法辨认是否是本人。~</view>
+      <view class="btn" bindtap="toReg">重新提交</view>
+    </view>
+  </view>
+</view>

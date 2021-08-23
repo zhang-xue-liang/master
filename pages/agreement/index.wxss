@@ -1,0 +1,38 @@
+.agreement{
+  height: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.agreement .top{
+  height: 30rpx;
+  background: #F9F9F9;
+}
+.agreement .main{
+  flex: 1;
+  padding: 30rpx;
+  overflow: auto;
+}
+.agreement .main view{
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  line-height: 48px;
+  line-height: 48rpx;
+}
+.agreement .bot{
+  padding: 35rpx 30rpx 30rpx 30rpx;
+}
+.agreement .bot view{
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  background: #FC7431;
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+}

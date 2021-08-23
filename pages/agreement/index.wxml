@@ -1,0 +1,11 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="agreement">
+  <view class="top"></view>
+  <view class="main">
+    <!-- <view>{{detail.content}}{{id}}</view> -->
+    <rich-text nodes="{{detail.content}}"></rich-text>
+  </view>
+  <view class="bot" wx:if="{{id === '0'}}">
+    <view bindtap="toReg">我已知晓，并同意</view>
+  </view>
+</view>

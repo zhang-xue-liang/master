@@ -1,0 +1,42 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="gdNotice">
+  <notice-head bind:showPop="showPop" bind:sectConfim="sectConfim"></notice-head>
+  <view class="notice-list">
+    <view class="item" wx:for="{{list}}" wx:for-index="key" wx:for-item="item">
+      <view class="top">
+        <view class="type">
+          <view class="tit">
+            <view class="empty" wx:if="{{item.readType === 0}}"></view>
+            <view class="txt">{{item.title}}</view>
+          </view>
+          <view class="tim">{{item.createTime}}</view>
+        </view>
+        <view class="desc">{{item.content}}</view>
+      </view>
+      <view class="bot">
+        <view class="ite">
+          <view>客户</view>
+          <view>{{item.userName}}</view>
+        </view>
+        <view class="ite">
+          <view>手机号</view>
+          <view>{{item.userMobile}}</view>
+        </view>
+        <view class="ite">
+          <view>地址</view>
+          <view>{{item.userAddr}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <van-popup show="{{ show }}" bind:close="onClose" round="{{true}}">
+    <view class="pop-wrap">
+      <view class="txt">确定要标记全部未读消息</view>
+      <view class="txt">为已读吗？</view>
+      <view class="bot">
+        <view bindtap="onClose">取消</view>
+        <view bindtap="confim">确定</view>
+      </view>
+    </view>
+  </van-popup>
+</view>

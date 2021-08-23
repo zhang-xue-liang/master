@@ -1,0 +1,6 @@
+<view>
+  <view wx:if='{{type == "home_spuList"}}' class="homeList-empty">
+    <image src="/images/test/noGoods.png"></image>
+    <view class="empty-text">暂无商品！</view>
+  </view>
+</view>

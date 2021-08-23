@@ -1,0 +1,5 @@
+<view class="areaPop">
+  <van-popup show="{{ show }}" position="bottom" custom-style="height: 45%;" bind:close="onClose">
+    <van-area area-list="{{ areaLis.areaList }}" bind:confirm="confirm"/>
+  </van-popup>
+</view>

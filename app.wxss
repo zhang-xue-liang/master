@@ -1,0 +1,137 @@
+@import 'weui/weui.wxss';
+
+page{
+  height: 100%;
+  overflow: auto;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.float_right{
+  float: right;
+}
+.float_left{
+  float: left
+}
+.space {
+  height:20rpx;
+  background-color: #F2f2f2;
+}
+.safeAreaOldPaddingBttom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.safeAreaNewPaddingBttom{
+  padding-bottom: constant(safe-area-inset-bottom);  
+}
+
+.safeAreaOldMarginBttom {
+  margin-bottom: env(safe-area-inset-bottom);
+}
+.safeAreaNewMarginBttom{
+  margin-bottom: constant(safe-area-inset-bottom);  
+}
+
+.no-data {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.no-data .line {
+  width:132rpx;
+  height:2rpx;
+  background: #999;
+}
+.no-data .txt {
+  font-size:26rpx;
+  color:rgba(153,153,153,1);
+  margin: 0 16rpx;
+}
+.ad-img {
+  width: 100vw;
+}
+
+
+@font-face {
+  font-family: 'bfont';  /* Project id 914542 */
+  src: url('//at.alicdn.com/t/font_914542_af8pk3bwyck.woff2?t=1629709500927') format('woff2'),
+       url('//at.alicdn.com/t/font_914542_af8pk3bwyck.woff?t=1629709500927') format('woff'),
+       url('//at.alicdn.com/t/font_914542_af8pk3bwyck.ttf?t=1629709500927') format('truetype');
+}
+
+.bfont{
+  font-family: "bfont" !important;
+  font-style: normal;
+}
+.icon_search:before{
+  content: "\e61e"
+}
+.icon_fujian:before{
+  content: "\e688"
+}
+.icon_rmb:before{
+  content: "\e643"
+}
+.icon_point:before{
+  content: "\e62A"
+}
+.icon-salesNum:before{
+  content: "\e62f"
+}
+.icon-cart:before{
+  content: "\e632"
+}
+.icon-uplod:before {
+  content: "\e679"
+}
+.icon-screening:before {
+  content: "\e687"
+}
+.icon-location:before {
+  content: "\e67a"
+}
+.icon-copy:before {
+  content: "\e8b0"
+}
+.icon-edit:before {
+  content: "\e67b"
+}
+.icon-navigation:before {
+  content: "\e67d"
+}
+.icon-phone:before {
+  content: "\e67e"
+}
+.icon-arrowRight:before {
+  content: "\e63d"
+}
+.icon-arrowUp:before {
+  content: "\eb21"
+}
+.icon-arrowDown:before {
+  content: "\e680"
+}
+.icon-read:before {
+  content: "\e686"
+}
+.icon-knowledge:before {
+  content: "\e790"
+}
+.icon-parts:before {
+  content: "\e681"
+}
+.icon-yinshi:before {
+  content: "\e685"
+}
+.icon-tip:before {
+  content: "\e7f3"
+}
+.icon-close:before {
+  content: "\e600"
+}

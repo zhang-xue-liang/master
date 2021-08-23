@@ -1,0 +1,125 @@
+.registered-container{
+  background: rgba(249, 249, 249, 1);
+  padding: 30rpx 30rpx 57rpx 30rpx;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+.registered-container .main{
+  padding: 30rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  margin-bottom: 30rpx;
+}
+.registered-container .main .title{
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  color: #333;
+  font-weight: bold;
+}
+.registered-container .main .info{
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+}
+.registered-container .main .item{
+  margin-bottom: 30rpx;
+}
+.registered-container .main .item:last-child{
+  margin-bottom: 0rpx;
+}
+.registered-container .main .item .tit{
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+.registered-container .main .item .ipt{
+  border-bottom: 1px solid rgba(204, 204, 204, 1);
+  padding-bottom: 10rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.registered-container .main .item .ipt input{
+  height: 52rpx;
+  line-height: 52rpx;
+  font-size: 26rpx;
+  color: rgba(153, 153, 153, 1);
+}
+.registered-container .main .item .ipt .btn{
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 0 17rpx;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FC7431;
+  border: 1px solid #FC7431;
+  border-radius: 10rpx;
+}
+.registered-container .main .item .ipt .btn .count view{
+  height:50rpx;
+  width: 100%;
+  line-height: 50rpx;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+}
+.registered-container .main .item .ipt .txt{
+  height: 52rpx;
+  line-height: 52rpx;
+  font-size: 26rpx;
+  color: rgba(153, 153, 153, 1);
+}
+.registered-container .main .item .up-idcard{
+  display: flex;
+  margin-top: 15rpx;
+}
+.registered-container .main .item .up-idcard .positive{
+  margin-right: 30rpx;
+}
+.registered-container .main .item .up-idcard .positive .upload{
+  width: 200rpx;
+  height: 100rpx;
+  border: 1px dashed #ccc;
+  border-radius: 10rpx;
+}
+.registered-container .main .item .up-idcard .positive .desc{
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  margin-top: 19rpx;
+  text-align: center;
+}
+.registered-container .main .item .up-idcard .positive .upload .empty{
+  padding: 10rpx;
+}
+.registered-container .main .item .up-idcard .positive .upload .show-image{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.registered-container .main .item .up-idcard .positive .upload .empty view:nth-child(1){
+  text-align: center;
+  font-size: 32rpx;
+}
+.registered-container .main .item .up-idcard .positive .upload .empty view:nth-child(2){
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+  text-align: center;
+}
+.registered-container .bottom{
+  height: 88rpx;
+  line-height: 88rpx;
+  width: 100%;
+  text-align: center;
+  background: rgba(252, 116, 49, 1);
+  border-radius: 10rpx;
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+}

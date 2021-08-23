@@ -1,0 +1,112 @@
+.knowageDetail{
+  height: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.knowageDetail .top{
+  height: 30rpx;
+  background: #F9F9F9;
+}
+.knowageDetail .main{
+  flex: 1;
+  padding: 30rpx;
+  overflow: auto;
+}
+.knowageDetail .main view{
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  line-height: 48px;
+  line-height: 48rpx;
+}
+.knowageDetail .main .list{
+  margin-top: 40rpx;
+  padding: 30rpx;
+  background: #F2F2F2;
+  border-radius: 10rpx;
+  margin-bottom: 30rpx;
+}
+.knowageDetail .main .list .title{
+  display: flex;
+}
+.knowageDetail .main .list .title view:nth-child(1){
+  font-size: 28rpx;
+  margin-right: 30rpx;
+}
+.knowageDetail .main .list .title view:nth-child(2){
+  font-size: 28rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  margin-bottom: 30rpx;
+}
+.knowageDetail .main .list .item{
+  color: #FC7431;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  margin-bottom: 20rpx;
+}
+.knowageDetail .pop .van-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.knowageDetail .pop .loading{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 500rpx;
+  color: #fff;
+}
+.knowageDetail .pop .loading .van-loading__text{
+  color: #fff;
+  margin-top: 20rpx;
+  font-size: 30rpx;
+}
+
+.knowageDetail  .pop-wrap{
+  width: 600rpx;
+  height: 240rpx;
+  padding-top: 80rpx;
+  border-radius: 30rpx;
+}
+.knowageDetail  .pop-wrap .txt{
+  padding: 0 122rpx;
+  display: flex;
+  justify-content: center;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+  line-height: 48rpx;
+}
+.knowageDetail  .pop-wrap .bots{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  height: 88rpx;
+}
+.knowageDetail  .pop-wrap .bots view{
+  flex: 0 0 50%;
+  text-align: center;
+  line-height: 88rpx;
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+}
+.knowageDetail  .pop-wrap .bots view:nth-child(1){
+  color: #FC7431;
+  border-top: 1px solid #FC7431;
+}
+.knowageDetail  .pop-wrap .bots view:nth-child(2){
+  color: #fff;
+  background: #FC7431;
+}

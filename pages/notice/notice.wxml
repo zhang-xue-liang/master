@@ -1,0 +1,22 @@
+<view class="notice">
+  <view class="gd-notice" bindtap="toGdNotice">
+    <view class="left">
+      <image src="../../images/notic.png"></image>
+      <view>工单提醒</view>
+    </view>
+    <view class="right">
+      <view></view>
+      <view>{{GdNum}}</view>
+    </view>
+  </view>
+  <view class="system-notice" bindtap="toSystemNotice">
+    <view class="left">
+      <image src="../../images/set.png"></image>
+      <view>系统消息</view>
+    </view>
+    <view class="right">
+      <view></view>
+      <view>{{sysNum}}</view>
+    </view>
+  </view>
+</view>

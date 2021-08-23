@@ -1,0 +1,162 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "登录",
+          "pathName": "pages/login/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "工单",
+          "pathName": "pages/index/index",
+          "query": "id=1",
+          "scene": null
+        },
+        {
+          "name": "搜索",
+          "pathName": "pages/search/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "工单详情",
+          "pathName": "pages/orderDetail/index",
+          "query": "id=1",
+          "scene": null
+        },
+        {
+          "name": "工单回执",
+          "pathName": "pages/receipt/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "客户签字",
+          "pathName": "pages/signature/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "通知",
+          "pathName": "pages/notice/notice",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "工单提醒",
+          "pathName": "pages/gdNotice/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "系统消息",
+          "pathName": "pages/systemNotice/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的",
+          "pathName": "pages/my/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "钱包",
+          "pathName": "pages/wallet/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "提现",
+          "pathName": "pages/withdrawal/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "工单记录",
+          "pathName": "pages/gdRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "今日结算",
+          "pathName": "pages/settlement/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "知识库",
+          "pathName": "pages/knowledge/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "报修商城",
+          "pathName": "pages/repairShop/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "注册",
+          "pathName": "pages/registered/registered",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "进度详情",
+          "pathName": "pages/plan/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "备注",
+          "pathName": "pages/note/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "选择备件",
+          "pathName": "pages/chooseParts/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "协议",
+          "pathName": "pages/agreement/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "知识库详情",
+          "pathName": "pages/knowledgeDetail/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "拒绝原因",
+          "pathName": "pages/refuse/index",
+          "query": "id=1",
+          "scene": null
+        },
+        {
+          "name": "认证",
+          "pathName": "pages/certification/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

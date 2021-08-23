@@ -1,0 +1,6 @@
+<view class="note">
+  <textarea model:value="{{remarkContent}}" fixed="true" class='text' maxlength="5000" focus='{{focus}}' name="content" placeholder="请输入拒绝原因"/>
+  <view class="bot">
+    <view bindtap="confim">提交</view>
+  </view>
+</view>

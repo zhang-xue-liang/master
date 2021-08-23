@@ -1,0 +1,37 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="record">
+  <van-sticky offset-top="{{ 0 }}">
+    <view class="tab">
+      <view class="item {{active==='0'?'active':''}}" bindtap="onChange" data-idx="0">
+        <view class="border" wx:if="{{active==='0'}}">
+          <view></view>
+        </view>
+        已结算
+      </view>
+      <view class="item {{active==='1'?'active':''}}" bindtap="onChange" data-idx="1">
+        <view class="border" wx:if="{{active==='1'}}">
+          <view></view>
+        </view>
+        未结算
+      </view>
+    </view>
+  </van-sticky>
+  <view class="list">
+    <view class="yijiesuan-item"  wx:for="{{list}}" wx:for-index="key" wx:for-item="item">
+      <view class="top">
+        <view>{{item.code}}</view>
+        <view class="{{item.workerAcceptType===3?'daisenhe':''}} {{item.workerAcceptType===4?'daipingjia':''}}">{{dateFir.gdRecordFilter(item.workerAcceptType)}}</view>
+      </view>
+      <view class="center">
+        <view>客户名称：{{item.clientName}}</view>
+        <view>手机号：{{item.clientMobile}}</view>
+        <view>计划时间：{{item.createTime}}</view>
+        <view>地址：{{item.address}}</view>
+      </view>
+      <view class="bot">
+        <view>小计：</view>
+        <view>{{item.price}}元</view>
+      </view>
+    </view>
+  </view>
+</view>

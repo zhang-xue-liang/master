@@ -1,0 +1,16 @@
+<view class="tab-container">
+	<!-- tab导航栏 -->
+	<!-- scroll-left属性可以控制滚动条位置 -->
+	<!-- scroll-with-animation滚动添加动画过渡 -->
+	<scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="{{true}}">
+		<block wx:for="{{tab_data}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+			<view class="nav-item {{currentTab == navItem.id ?'active':''}}" data-id="{{navItem.id}}" data-current="{{navItem.id}}" bindtap="switchNav">
+				<view>{{navItem.num}}</view>
+				<view>{{navItem.name}}</view>
+			</view>
+		</block>		        
+	</scroll-view>
+	<view class="screening" bindtap="showScreening">
+		<image src="/images/sx.png"></image>
+	</view>
+</view>

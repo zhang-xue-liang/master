@@ -1,0 +1,73 @@
+<view class="registered-container">
+  <view class="main">
+    <view class="title">绑定账号</view>
+    <view class="info">微信号：</view>
+  </view>
+  <view class="main">
+    <view class="title">个人信息</view>
+    <view class="item">
+      <view class="tit">姓名</view>
+      <view class="ipt">
+        <input type="text" model:value="{{name}}" placeholder="点击输入姓名"/>
+      </view>
+    </view>
+    <view class="item">
+      <view class="tit">手机号</view>
+      <view class="ipt">
+        <input type="text" model:value="{{mobile}}" placeholder="点击输入手机号"/>
+        <view class="btn" bindtap="getPhoneC">
+          <span wx:if="{{time <= 0}}">获取验证码</span>
+          <van-count-down class="count" wx:else time="{{ time }}" bind:finish="finish" format="ssS后重新获取" />
+        </view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="tit">验证码</view>
+      <view class="ipt">
+        <input type="text" model:value="{{verificationCode}}" placeholder="点击输入验证码"/>
+      </view>
+    </view>
+    <view class="item">
+      <view class="tit">地址</view>
+      <view class="ipt">
+        <view class="txt" bindtap="showArea">{{tip}}</view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="tit">详细地址</view>
+      <view class="ipt">
+        <input type="text" model:value="{{address}}" placeholder="请输入详细地址"/>
+      </view>
+    </view>
+    <view class="item">
+      <view class="tit">身份证照</view>
+      <view class="up-idcard">
+        <view class="positive">
+          <view class="upload">
+            <view class="empty" wx:if='{{!idCardPositive}}' bindtap="chooseIdCardPositive">
+              <view class="bfont icon-uplod"></view>
+              <view>上传证件照</view>
+            </view>
+            <image wx:else class= "show-image" mode="aspectFitf" src="{{idCardPositive}}" bindtap="chooseIdCardPositive"></image>
+          </view>
+          <view class="desc">证件照正面</view>
+        </view>
+        <view class="reverse positive">
+          <view class="upload">
+            <view class="empty" wx:if='{{!idCardReverse}}' bindtap="chooseIdCardReverse">
+              <view class="bfont icon-uplod"></view>
+              <view>上传证件照</view>
+            </view>
+            <image wx:else class= "show-image" mode="aspectFitf" src="{{idCardReverse}}" bindtap="chooseIdCardReverse"></image>
+          </view>
+          <view class="desc">证件照反面</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="bottom">
+    <view bindtap="confim">提交申请</view>
+    <!-- <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">获取用户信息</button> -->
+  </view>
+  <area id="areaPop" bindareadata="areadata"/>
+</view>

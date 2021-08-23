@@ -1,0 +1,32 @@
+.knowledge{
+  min-height: 100%;
+  background: #fff;
+}
+.knowledge .list{
+  padding: 66rpx 30rpx 0 30rpx;
+}
+.knowledge .list .item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 55rpx;
+}
+.knowledge .list .item .left{
+  display: flex;
+  align-items: center;
+}
+.knowledge .list .item .left image{
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 23rpx;
+}
+.knowledge .list .item .left view:nth-child(2){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+.knowledge .list .item .right{
+  font-size: 40rpx;
+  color: #666;
+}

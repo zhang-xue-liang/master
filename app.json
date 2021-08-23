@@ -1,0 +1,108 @@
+{
+  "pages": [
+    "pages/login/index",
+    "pages/registered/registered",
+    "pages/index/index", 
+    "pages/search/search",
+    "pages/orderDetail/index",
+    "pages/receipt/index",
+    "pages/signature/index",
+    "pages/gdNotice/index",
+    "pages/systemNotice/index",
+    "pages/wallet/index",
+    "pages/withdrawal/index",
+    "pages/gdRecord/index",
+    "pages/settlement/index",
+    "pages/knowledge/index",
+    "pages/repairShop/index",
+    "pages/plan/index",
+    "pages/note/index",
+    "pages/chooseParts/index",
+    "pages/agreement/index",
+    "pages/knowledgeDetail/index",
+    "pages/refuse/index",
+    "pages/certification/index",
+
+
+
+    "pages/notice/notice",
+    "pages/my/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "众享_师傅端",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#666",
+    "selectedColor": "#FC7431",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/gd.png",
+        "selectedIconPath": "images/gdActive.png",
+        "text": "工单"
+      },
+      {
+        "pagePath": "pages/notice/notice",
+        "iconPath": "images/notice.png",
+        "selectedIconPath": "images/noticeActive.png",
+        "text": "通知"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mineActive.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx7786fe79295f10fd"
+  ],
+  "usingComponents": {
+    "van-area": "@vant/weapp/area/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "area": "/components/area/area",
+    "gd-screening": "components/gd-screening/gd-screening",
+    "van-sticky": "@vant/weapp/sticky/index",
+    "notice-head": "components/notice-head/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index",
+    "van-overlay": "@vant/weapp/overlay/index",
+    "van-loading": "@vant/weapp/loading/index",
+
+
+
+
+    "float-menu": "/components/float-menu/index",
+    "parser":"/components/parser.20200414.min/parser",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-count-down": "@vant/weapp/count-down/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "spu-List": "/components/spu-list/index",
+    "home-tab": "components/home-tab/index",
+    "empty": "components/empty/index",
+    "good-info": "components/good-info/index",
+    "good-img": "components/good-img/index",
+    "good-action": "components/good-action/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,15 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="knowledge">
+  <view style="width:100%;height:30rpx;background:#f9f9f9"></view>
+  <view class="list">
+    <view class="item" wx:for="{{list}}" wx:for-item="item" wx:key="key" bindtap="toDetail" data-id="{{item}}">
+      <view class="left">
+        <image src="/images/lamp.png"></image>
+        <view>{{item.title}}</view>
+      </view>
+      <view class="right">
+        <view class="bfont icon-arrowRight"></view>
+      </view>
+    </view>
+  </view>
+</view>

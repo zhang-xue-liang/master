@@ -1,0 +1,40 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="repair">
+  <view class="head">
+    <image src="/images/search.png"></image>
+    <input type="text" model:value="{{name}}" bindconfirm="enter" placeholder="请输入备件名称进行查询"/>
+  </view>
+  <view class="list">
+    <view class="item" wx:for="{{goodData}}" wx:for-item="item" wx:key="index">
+      <view class="left">
+        <image src="{{item.picture}}"></image>
+      </view>
+      <view class="right">
+        <view class="top">{{item.name}}</view>
+        <view class="center">
+          <view class="binhao">
+            <view>编号：</view>
+            <view>{{item.sparePartsCode}}</view>
+          </view>
+          <view class="guige">
+            <view>规格：</view>
+            <view>{{item.remark}}</view>
+          </view>
+        </view>
+        <view class="bot">
+          <view class="le">
+            <view class="danwei">
+              <view>单位：</view>
+              <view>{{item.sparePartsUnitId}}</view>
+            </view>
+            <view class="kucun">
+              <view>库存：</view>
+              <view>{{item.number}}</view>
+            </view>
+          </view>
+          <view class="ri">￥{{item.priceValue}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

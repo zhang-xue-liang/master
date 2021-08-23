@@ -1,0 +1,96 @@
+.search-container{
+  background: #fff;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+.search-container .top{
+  height: 50rpx;
+  width: 100%;
+  line-height: 50rpx;
+  text-align: center;
+  background: rgba(252, 116, 49, .1);
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FC7431;
+}
+.search-container .shaw{
+  background: rgba(249, 249, 249, 1);
+  height: 30rpx;
+}
+.search-container .main{
+  padding: 30rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  margin-bottom: 30rpx;
+}
+.search-container .main .item{
+  margin-bottom: 20rpx;
+}
+.search-container .main .item:last-child{
+  margin-bottom: 0rpx;
+}
+.search-container .main .item .tit{
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+.search-container .main .item .ipt{
+  border-bottom: 1px solid rgba(204, 204, 204, 1);
+  padding-bottom: 10rpx;
+}
+.search-container .main .item .ipt input{
+  height: 52rpx;
+  line-height: 52rpx;
+  font-size: 26rpx;
+  color: rgba(153, 153, 153, 1);
+}
+.search-container .main .bottom{
+  height: 88rpx;
+  line-height: 88rpx;
+  width: 100%;
+  text-align: center;
+  background: rgba(252, 116, 49, 1);
+  border-radius: 10rpx;
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-top: 60rpx;
+}
+
+.search-container .pop .pop-main .gdStatus{
+  padding: 30rpx;
+}
+.search-container .pop .pop-main .gdStatus view{
+  height: 30rpx;
+  line-height: 30rpx;
+  border-bottom: 1px solid #eee;
+  padding: 20rpx 0;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  text-align: center;
+}
+.search-container .pop .pop-main .gdStatus view:last-child{
+  border: none;
+}
+.search-container .pop .pop-main .gdType{
+  padding: 30rpx;
+}
+.search-container .pop .pop-main .gdType view{
+  height: 30rpx;
+  line-height: 30rpx;
+  border-bottom: 1px solid #eee;
+  padding: 20rpx 0;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  text-align: center;
+}
+.search-container .pop .pop-main .gdType view:last-child{
+  border: none;
+}

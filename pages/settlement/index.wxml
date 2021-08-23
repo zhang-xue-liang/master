@@ -1,0 +1,16 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="settlement">
+  <view style="width:100%;height:30rpx;background:#f9f9f9"></view>
+  <view class="list">
+    <view class="item" wx:for="{{list}}" wx:for-index="key" wx:for-item="item">
+      <view class="top">
+        <view>工单编号：{{item.code}}</view>
+        <view>{{item.price}}</view>
+      </view>
+      <view class="bot">
+        <view>{{item.completeTime}}</view>
+        <view>{{dateFir.gdRecordFilter(item.workerAcceptType)}}</view>
+      </view>
+    </view>
+  </view>
+</view>

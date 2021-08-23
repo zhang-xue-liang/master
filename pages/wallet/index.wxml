@@ -1,0 +1,82 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="wallet">
+  <view class="head">
+    <view class="main">
+      <view class="left">
+        <view>当前账户余额</view>
+        <view>{{walletData.availableAmount===undefined?0:walletData.availableAmount}}</view>
+      </view>
+      <view class="right">
+        <view>冻结金额</view>
+        <view>{{walletData.frozenBalance===undefined?0:walletData.frozenBalance}}</view>
+      </view>
+    </view>
+    <view class="bot">
+      <view bindtap="toTX">提现</view>
+    </view>
+  </view>
+  <view class="tab">
+    <view class="item {{active==='0'?'active':''}}" bindtap="onChange" data-idx="0">
+      <view class="border" wx:if="{{active==='0'}}">
+        <view></view>
+      </view>
+      收入记录
+    </view>
+    <view class="item {{active==='1'?'active':''}}" bindtap="onChange" data-idx="1">
+      <view class="border" wx:if="{{active==='1'}}">
+        <view></view>
+      </view>
+      提现记录
+    </view>
+    <view class="item {{active==='2'?'active':''}}" bindtap="onChange" data-idx="2">
+      <view class="border" wx:if="{{active==='2'}}">
+        <view></view>
+      </view>
+      罚款记录
+    </view>
+  </view>
+  <view class="list">
+    <view class="income-item" wx:if="{{active==='0'}}" wx:for="{{incomeData}}" wx:for-item="item" wx:key="key">
+      <view class="top">
+        <view>工单编号：{{item.no}}</view>
+        <view>{{item.jine}}元</view>
+      </view>
+      <view class="bot">
+        <view>{{item.time}}</view>
+        <view>{{dateFir.incomeTypeFilter(item.status)}}</view>
+      </view>
+    </view>
+
+    <view class="withdrawal-item" wx:if="{{active==='1'}}" wx:for="{{withdrawalData}}" wx:for-item="item" wx:key="key">
+      <view class="left">
+        <image src="/images/wx.jpg"></image>
+      </view>
+      <view class="center">
+        <view>{{item.mobile}}</view>
+        <view>{{item.applyTime}}</view>
+      </view>
+      <view class="right">
+        <view>{{item.amount}}</view>
+        <view class="{{item.status==='1'?'withdrawalinig':''}}">{{dateFir.withdrawalTypeFilter(item.approveStatus)}}</view>
+      </view>
+    </view>
+
+    <view class="item" wx:if="{{active==='2'}}" wx:for="{{fineData}}" wx:for-item="item" wx:key="key">
+      <view class="top">
+        <view>工单编号：{{item.workOrderCode}}</view>
+        <view>{{item.finePrice}}元</view>
+      </view>
+      <view class="center">
+        <view class="left">
+          <view>操作人:</view>
+          <view>{{item.operatorName}}</view>
+        </view>
+        <view class="right">
+          <view>原因:</view>
+          <view>{{item.backReson}}</view>
+        </view>
+      </view>
+      <view class="bot">{{item.updateTime}}</view>
+    </view>
+  </view>
+</view>

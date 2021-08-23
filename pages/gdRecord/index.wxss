@@ -1,0 +1,109 @@
+.record{
+  min-height: 100%;
+  background: rgba(249, 249, 249, 1);
+}
+.record .tab{
+  height: 88rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 141rpx;
+  background: #fff;
+  line-height: 88rpx;
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  margin-bottom: 30rpx;
+}
+.record .tab .active{
+  color: #FC7431;
+  position: relative;
+}
+.record .tab .active .border{
+  position: absolute;
+  left: 0;
+  bottom: 10rpx;
+  width: 100%;
+  height: 3px;
+  display: flex;
+  justify-content: center;
+}
+.record .tab .active .border view{
+  width: 52rpx;
+  height: 3px;
+  border-radius: 3rpx;
+  background: #FC7431;
+}
+.record .list{
+  padding: 30rpx;
+}
+.record .list .yijiesuan-item{
+  width: 100%;
+  background: #fff;
+  border-radius: 30rpx;
+  padding: 42rpx 30rpx 30rpx 30rpx;
+  box-sizing: border-box;
+  margin-bottom: 30rpx;
+}:last-child{
+  margin-bottom: 0rpx !important;
+}
+.record .list .yijiesuan-item .top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 41rpx;
+  border-bottom: 1px solid rgba(238, 238, 238, 1);
+}
+.record .list .yijiesuan-item .top view:nth-child(1){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+}
+.record .list .yijiesuan-item .top view:nth-child(2){
+ height: 46rpx;
+ padding: 0 20rpx;
+ line-height: 46rpx;
+ background: rgba(153, 153, 153, .1);
+ font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+  border-radius: 23rpx;
+}
+.record .list .yijiesuan-item .top .daisenhe{
+  background: rgba(11, 190, 78, .1) !important;
+  color: rgba(11, 190, 78, 1) !important;
+}
+.record .list .yijiesuan-item .top .daipingjia{
+  background: rgba(252, 116, 49, .1) !important;
+  color: rgba(252, 116, 49, 1) !important;
+}
+.record .list .yijiesuan-item .center{
+  padding: 30rpx 0;
+  border-bottom: 1px solid rgba(238, 238, 238, 1);
+}
+.record .list .yijiesuan-item .center view{
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+}
+.record .list .yijiesuan-item .center view:nth-child(1),.record .list .yijiesuan-item .center view:nth-child(2),.record .list .yijiesuan-item .center view:nth-child(3){
+  margin-bottom: 25rpx;
+}
+.record .list .yijiesuan-item .bot{
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 30rpx;
+}
+.record .list .yijiesuan-item .bot view{
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+}
+.record .list .yijiesuan-item .bot view:nth-child(2){
+  color: rgba(232, 0, 1, 1);
+}
+

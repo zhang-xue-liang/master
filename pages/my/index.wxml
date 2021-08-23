@@ -1,0 +1,97 @@
+<import src="/template/login/index.wxml" />
+<view class="my-container">
+	<view class="head">
+    <view class="ma">
+      <view class="left">
+        <image src="{{avatar}}"></image>
+        <view>{{username}}</view>
+      </view>
+      <view class="right" bindtap="toWallet">余额:￥{{availableAmount===''?0:availableAmount}}</view>
+    </view>
+    <view class="main">
+      <view class="li">
+        <view class="item" bindtap="toGdRecord">
+          <view>{{orderData.today}}</view>
+          <view>今日完成(单)</view>
+        </view>
+        <view class="item" bindtap="toGdRecord">
+          <view>{{orderData.month}}</view>
+          <view>本月完成(单)</view>
+        </view>
+        <view class="item" bindtap="toGdRecord">
+          <view>{{orderData.lastMonth}}</view>
+          <view>上个月完成(单)</view>
+        </view>
+      </view>
+      <view class="li">
+        <view class="item" bindtap="toSettlement" data-id="1">
+          <view>{{settlementData.today===null?0:settlementData.today}}</view>
+          <view>今日结算(元)</view>
+        </view>
+        <view class="item" bindtap="toSettlement" data-id="0">
+          <view>{{settlementData.month===null?0:settlementData.month}}</view>
+          <view>本月结算(元)</view>
+        </view>
+        <view class="item" bindtap="toSettlement" data-id="0">
+          <view>{{settlementData.lastMonth===null?0:settlementData.lastMonth}}</view>
+          <view>上个月结算(元)</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="page-list">
+    <view class="item" bindtap="toKnowledge">
+      <view class="left">
+        <image src="/images/knowledge.png"></image>
+        <view>知识库</view>
+      </view>
+      <view class="right">
+        <view class="bfont icon-arrowRight"></view>
+      </view>
+    </view>
+    <view class="item" bindtap="toRepairSho">
+      <view class="left">
+        <image src="/images/knowledge.png"></image>
+        <view>备件</view>
+      </view>
+      <view class="right">
+        <view class="bfont icon-arrowRight"></view>
+      </view>
+    </view>
+    <view class="item" bindtap="toAgreement" data-id="1">
+      <view class="left">
+        <image src="/images/knowledge.png"></image>
+        <view>隐私政策</view>
+      </view>
+      <view class="right">
+        <view class="bfont icon-arrowRight"></view>
+      </view>
+    </view>
+  </view>
+  <view class="bot">
+    <view class="btn" bindtap="loginOut">
+      退出登录
+    </view>
+    <view class="tip">
+      <view class="top">
+        <view>客服电话：</view>
+        <view>123-123456</view>
+      </view>
+      <view class="tim">
+        上午9:00 — 下午21:00
+      </view>
+    </view>
+  </view>
+  <view style="height:130rpx"></view>
+  <van-popup show="{{ show }}" bind:close="onClose" round="{{true}}">
+    <view class="pop-wrap">
+      <view class="txt">确定要退出此帐号吗？</view>
+      <view class="bots">
+        <view bindtap="onClose">取消</view>
+        <view bindtap="confim">确定</view>
+      </view>
+    </view>
+  </van-popup>
+</view>
+
+<!-- <template is="apifmLogin" data="{{wxlogin: wxlogin}}" /> -->

@@ -1,0 +1,18 @@
+<view class="spu_listWarp">
+  <view wx:for="{{spuListData}}" wx:key="index" class='spu_cardWarp {{ index%2 == 1 ? "float_right" : "float_left"}}'               bindtap="toDetail" data-id="{{item.id}}">
+    <view class="spu_pic">
+      <image src="{{item.iconaddr}}"></image>
+    </view>
+    <view class="spu_name">{{item.goodsname}}</view>
+    <view class="spu_cash">
+      <text class="bfont icon_rmb"></text>
+      <text wx:if="{{item.orderno}}">{{item.orderno/100}}起</text>
+      <text wx:else>{{item.price/100}}起</text>
+    </view>
+    <view class="spu_point">
+      <text class="bfont icon_point"></text>
+      <text wx:if="{{item.orderno}}">{{item.orderno}}起</text>
+      <text wx:else>{{item.price}}起</text>
+    </view>
+  </view>
+</view>

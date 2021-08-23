@@ -1,0 +1,23 @@
+<view class="goodInfo-warp">
+  <view class="good-name">{{goodInfo.goodsname}}</view>
+  <view class="good-price">
+    <view class="left">
+      <view class="price-cash">
+        <view class="bfont icon_rmb"></view>
+        <view wx:if="{{goodInfo.prop1}}">{{goodInfo.prop1/100}}</view>
+        <view wx:else>{{goodInfo.price/100}}</view>
+        <view>起</view>
+      </view>
+      <view class="price-point">
+        <view class="bfont icon_point"></view>
+        <view wx:if="{{goodInfo.prop1}}">{{goodInfo.prop1}}</view>
+        <view wx:else>{{goodInfo.price}}</view>
+        <view>起</view>
+      </view>
+    </view>
+    <view class="right">
+      <view class="bfont icon-salesNum"></view>
+      <view class="salesNum">已售{{salesNum}}</view>
+    </view>
+  </view>
+</view>

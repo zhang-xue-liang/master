@@ -1,0 +1,125 @@
+.gdNotice-container{
+  height: 100rpx;
+  width: 100%;
+  background: #fff;
+  margin-bottom: 30rpx;
+  padding: 36rpx 30rpx;
+  box-sizing: border-box;
+}
+.gdNotice-container .top{
+  display: flex;
+  justify-content: space-between;
+}
+.gdNotice-container .top .left{
+  display: flex;
+}
+.gdNotice-container .top .left .all{
+  display: flex;
+  margin-right: 60rpx;
+}
+.gdNotice-container .top .left .all view:nth-child(1){
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  margin-right: 5rpx;
+}
+.gdNotice-container .top .left .all .icon-arrowDown{
+  color: #666;
+  display: flex;
+  align-items: top;
+  justify-content: left;
+}
+.gdNotice-container .top .left .all .icon-arrowUp{
+  color: rgba(252, 116, 49, 1);
+}
+.gdNotice-container .top .left .time{
+  display: flex;
+  margin-right: 60rpx;
+}
+.gdNotice-container .top .left .time view:nth-child(1){
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  margin-right: 5rpx;
+}
+.gdNotice-container .top .left .time .icon-arrowDown{
+  color: #666;
+  display: flex;
+  align-items: top;
+  justify-content: left;
+}
+.gdNotice-container .top .left .time .icon-arrowUp{
+  color: rgba(252, 116, 49, 1);
+}
+.gdNotice-container .top .right{
+  display: flex;
+}
+.gdNotice-container .top .right image{
+  width: 17px;
+  height: 17px;
+  margin-right: 10rpx;
+}
+.gdNotice-container .top .right view:nth-child(2){
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+}
+.gdNotice-container .notice-pop .main{
+  padding: 36rpx 30rpx 0 30rpx;
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+}
+.gdNotice-container .notice-pop .main .type-list{
+  display: flex;
+  margin-top: 30rpx;
+  flex-wrap: wrap;
+}
+.gdNotice-container .notice-pop .main .type-list .item{
+  border: 1px solid rgba(204, 204, 204, 1);
+  border-radius: 10rpx;
+  padding: 12rpx 40rpx;
+  margin-right: 30rpx;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  margin-bottom: 30rpx;
+}
+.gdNotice-container .notice-pop .main .type-list .active{
+  color: rgba(252, 116, 49, 1);
+  border: 1px solid rgba(252, 116, 49, 1);
+}
+.gdNotice-container .notice-pop .main .bot-btn{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 80rpx;
+  width: 100%;
+  border-top: 1px solid rgba(204, 204, 204, 1);
+  display: flex;
+}
+.gdNotice-container .notice-pop .main .bot-btn view:nth-child(1){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+  text-align: center;
+  width: 50%;
+  line-height: 80rpx;
+}
+.gdNotice-container .notice-pop .main .bot-btn view:nth-child(2){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  width: 50%;
+  line-height: 80rpx;
+  background: rgba(252, 116, 49, 1);
+}
+
+@import "/app.wxss"

@@ -1,0 +1,54 @@
+<view class="gdNotice-container">
+	<view class="top">
+		<view class="left">
+			<view class="all" bindtap="chioceType">
+				<view>{{typeTip}}</view>
+				<view class="bfont {{allActive === false?'icon-arrowDown':'icon-arrowUp'}}"></view>
+			</view>
+			<view class="time" bindtap="chioceTime">
+				<view>{{timeTip}}</view>
+				<view class="bfont {{timeActive === false?'icon-arrowDown':'icon-arrowUp'}}"></view>
+			</view>
+		</view>
+		<view class="right" bindtap="readAll">
+			<image src="/images/read.png"></image>
+			<view>标记全部为已读</view>
+		</view>
+	</view>
+	<van-popup class="notice-pop" show="{{ show }}" position="top" custom-style="width: 100%;height: 35%" bind:close="onClose">
+	<view class="main">
+		<view class="top">
+			<view class="left">
+				<view class="all" bindtap="chioceType">
+					<view>{{typeTip}}</view>
+					<view class="bfont {{allActive === false?'icon-arrowDown':'icon-arrowUp'}}"></view>
+				</view>
+				<view class="time" bindtap="chioceTime">
+					<view>{{timeTip}}</view>
+					<view class="bfont {{timeActive === false?'icon-arrowDown':'icon-arrowUp'}}"></view>
+				</view>
+			</view>
+			<view class="right" bindtap="readAll">
+				<image src="/images/read.png"></image>
+				<view>标记全部为已读</view>
+			</view>
+		</view>
+		<view class="type-list" wx:if="{{allActive===true}}">
+			<view class="item {{typeAcId==='3'? 'active': ''}}" bindtap="chioceTypeItem" data-id="3" data-tip="全部">全部</view>
+			<view class="item {{typeAcId==='0'? 'active': ''}}" bindtap="chioceTypeItem" data-id="0" data-tip="未读">未读</view>
+			<view class="item {{typeAcId==='1'? 'active': ''}}" bindtap="chioceTypeItem" data-id="1" data-tip="已读">已读</view>
+		</view>
+		<view class="type-list" wx:if="{{allActive===false}}">
+			<view class="item {{timeAcId==='4'? 'active': ''}}" bindtap="chioceTimeItem" data-id="4" data-tip="全部">全部</view>
+			<view class="item {{timeAcId==='0'? 'active': ''}}" bindtap="chioceTimeItem" data-id="0" data-tip="今天">今天</view>
+			<view class="item {{timeAcId==='1'? 'active': ''}}" bindtap="chioceTimeItem" data-id="1" data-tip="昨天">昨天</view>
+			<view class="item {{timeAcId==='2'? 'active': ''}}" bindtap="chioceTimeItem" data-id="2" data-tip="近7日">近7日</view>
+			<view class="item {{timeAcId==='3'? 'active': ''}}" bindtap="chioceTimeItem" data-id="3" data-tip="近30日">近30日</view>
+		</view>
+		<view class="bot-btn">
+			<view bindtap="reSet">重置</view>
+			<view bindtap="confim">确定</view>
+		</view>
+	</view> 
+  </van-popup>
+</view>

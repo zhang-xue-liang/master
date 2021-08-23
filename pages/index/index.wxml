@@ -1,0 +1,26 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="index-container">
+  <van-sticky offset-top="{{ 0 }}">
+    <view class="hed">
+      <home-tab id="gdTab" bind:changeTab="changeTab" bind:showScreening="showScreening"></home-tab>
+    </view>
+  </van-sticky>
+ <gd-screening id="screeningPop" bind:confim="search"></gd-screening>
+ <view class="order-list" >
+   <view class="item" wx:for="{{list}}" wx:for-index="idx" wx:for-item="item" wx:key="idx" bindtap="toOrderDetail" data-id="{{item.id}}" data-code="{{item.code}}">
+    <view class="top" >
+      <view>{{item.code}}</view>
+      <view class="{{item.workerAcceptType === 1?'accepted':''||item.workerAcceptType === 0?'accepting':''||item.workerAcceptType === 2?'ongoing':'' || item.workerAcceptType >= 3?'wanc':'' }}">{{dateFir.orderListAcceptFilter(item.workerAcceptType)}}</view>
+    </view>
+    <view class="center">
+      <view>客户名称：{{item.clientName}}</view>
+      <view>手机号：{{item.clientMobile}}</view>
+      <view>计划时间：{{item.createTime}}</view>
+      <view>地址：{{item.address}}</view>
+    </view>
+    <view class="bot">
+      预计：<span>{{item.price}}元</span>
+    </view>
+   </view>
+ </view>
+</view>

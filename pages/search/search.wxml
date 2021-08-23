@@ -1,0 +1,83 @@
+<view class="search-container">
+  <view class="top">
+    按条件进行搜索（可多条件搜索）
+  </view>
+  <view class="shaw"></view>
+  <view class="main">
+    <view class="item">
+      <view class="tit">客户名称</view>
+      <view class="ipt">
+        <input type="text" model:value="{{customName}}" placeholder="点击输入客户名称进行搜索"/>
+      </view>
+    </view>
+    <view class="item">
+      <view class="tit">手机号</view>
+      <view class="ipt">
+        <input type="text" model:value="{{telephoneNumber}}" placeholder="点击输入手机号进行搜索"/>
+      </view>
+    </view>
+    <view class="item">
+      <view class="tit">工单状态</view>
+      <view class="ipt">
+        <input type="text" placeholder="{{statusTip}}" disabled="true" bindtap="chooseStatus"/>
+      </view>
+    </view>
+    <view class="item">
+      <view class="tit">工单类型</view>
+      <view class="ipt">
+        <input type="text" placeholder="{{typeTip}}" disabled="true" bindtap="chooseType"/>
+      </view>
+    </view>
+    <view class="item">
+      <view class="tit">创建时间</view>
+      <view class="ipt">
+        <input type="text" placeholder="{{time1Tip}}" disabled="true" bindtap="chooseCreatTime"/>
+      </view>
+    </view>
+    <view class="item">
+      <view class="tit">完成时间</view>
+      <view class="ipt">
+        <input type="text" placeholder="{{time2Tip}}" disabled="true" bindtap="chooseCompleteTime"/>
+      </view>
+    </view>
+    <view class="bottom">
+      <view bindtap="search">立即搜索</view>
+    </view>
+  </view>
+  <view class="pop">
+    <van-popup show="{{ show }}" position="bottom"  bind:close="onClose">
+      <view class="pop-main">
+        <view class="gdStatus" wx:if="{{type === 'STATUS'}}">
+          <view bindtap="confim" data-type="STATUS" data-value="4">全部</view>
+          <view bindtap="confim" data-type="STATUS" data-value="0">待接受</view>
+          <view bindtap="confim" data-type="STATUS" data-value="1">已接受</view>
+          <view bindtap="confim" data-type="STATUS" data-value="2">进行中</view>
+          <view bindtap="confim" data-type="STATUS" data-value="3">已完成</view>
+        </view>
+        <view class="gdType" wx:if="{{type === 'TYPE'}}">
+          <view bindtap="confim" data-type="TYPE" data-value="4">全部</view>
+          <view bindtap="confim" data-type="TYPE" data-value="0">安装</view>
+          <view bindtap="confim" data-type="TYPE" data-value="1">维修</view>
+        </view>
+        <view class="TIME1" wx:if="{{type === 'TIME1'}}">
+          <van-datetime-picker
+            type="date"
+            value="{{ currCreatTime }}"
+            formatter="{{ formatter }}"
+            bind:confirm="confirmCreatTime"
+            bind:cancel="cancelCreatTime"
+          />
+        </view>
+        <view class="TIME2" wx:if="{{type === 'TIME2'}}">
+          <van-datetime-picker
+            type="date"
+            value="{{ currCompleteTime }}"
+            formatter="{{ formatter }}"
+            bind:confirm="confirmCompleteTime"
+            bind:cancel="cancelCreatTime"
+          />
+        </view>
+      </view>
+    </van-popup>
+  </view>
+</view>

@@ -1,0 +1,102 @@
+.notice{
+  height: 100%;
+  background: #fff;
+  padding: 43rpx 30rpx;
+  box-sizing: border-box;
+}
+.notice .gd-notice{
+  border-bottom: 1px solid rgba(238, 238, 238, 1);
+  padding: 32rpx 26rpx 32rpx 0;
+  display: flex;
+  justify-content: space-between;
+}
+.notice .gd-notice .left{
+  display: flex;
+  align-items: center;
+}
+.notice .gd-notice .left image{
+  width: 76rpx;
+  height: 76rpx;
+  margin-right: 20rpx;
+  background: linear-gradient(0deg, #FC7431 0%, #FFA64F 100%);
+  border-radius: 50%;
+}
+.notice .gd-notice .left view:nth-child(2){
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+.notice .gd-notice .right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.notice .gd-notice .right view:nth-child(1){
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+  margin-bottom: 6rpx;
+}
+.notice .gd-notice .right view:nth-child(2){
+  min-height: 36rpx;
+  min-width: 36rpx;
+  padding: 5rpx;
+  border-radius: 50%;
+  background: rgba(232, 0, 1, 1);
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 36rpx;
+}
+
+.notice .system-notice{
+  padding: 32rpx 26rpx 32rpx 0;
+  display: flex;
+  justify-content: space-between;
+}
+.notice .system-notice .left{
+  display: flex;
+  align-items: center;
+}
+.notice .system-notice .left image{
+  width: 76rpx;
+  height: 76rpx;
+  margin-right: 20rpx;
+  background: linear-gradient(0deg, #31A8FC 0%, #51E4FF 100%);
+  border-radius: 50%;
+}
+.notice .system-notice .left view:nth-child(2){
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+.notice .system-notice .right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.notice .system-notice .right view:nth-child(1){
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+  margin-bottom: 6rpx;
+}
+.notice .system-notice .right view:nth-child(2){
+  min-height: 36rpx;
+  min-width: 36rpx;
+  padding: 5rpx;
+  border-radius: 50%;
+  background: rgba(232, 0, 1, 1);
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 36rpx;
+}

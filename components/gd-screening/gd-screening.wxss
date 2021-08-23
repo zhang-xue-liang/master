@@ -1,0 +1,102 @@
+.screenPop{
+  box-sizing: border-box;
+  height: 100%;
+  padding-top: 30rpx;
+  position: relative;
+}
+.screenPop .title{
+  padding: 0 30rpx 30rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(238, 238, 238, 1);
+}
+.screenPop .title view:nth-child(1){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+}
+.screenPop .title view:nth-child(2){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+}
+.screenPop .main{
+  margin-top: 30rpx;
+  padding: 0 30rpx;
+}
+.screenPop .main .item{
+  margin-bottom: 30rpx;
+}
+.screenPop .main .item .tit{
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 20rpx;
+}
+.screenPop .main .item .list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.screenPop .main .item .list view{
+  min-width: 74rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+  text-align: center;
+  border: 1px solid #CCCCCC;
+  border-radius: 10px;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  padding: 14rpx 23rpx;
+}
+.screenPop .main .item .list .active{
+  border: 1px solid rgba(252, 116, 49, 1);
+  color: rgba(252, 116, 49, 1);
+}
+.screenPop .main .item .list view:nth-child(1),.screenPop .main .item .list view:nth-child(2),.screenPop .main .item .list view:nth-child(4){
+  margin-right: 30rpx;
+  margin-bottom: 30rpx;
+}
+.screenPop .btn{
+  padding: 0 30rpx;
+}
+.screenPop .btn view{
+  border: 1px solid #FC7431;
+  border-radius: 10rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FC7431;
+  text-align: center;
+}
+.screenPop .bot{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+  bottom: 150rpx;
+  padding: 0 50rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.screenPop .bot view{
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  padding: 14rpx 51rpx;
+  border-radius: 10rpx;
+}
+.screenPop .bot view:nth-child(1){
+  background: rgba(204, 204, 204, 1);
+  color: #666666;
+}
+.screenPop .bot view:nth-child(2){
+  background: rgba(252, 116, 49, 1);
+  color: #fff;
+}

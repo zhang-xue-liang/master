@@ -1,0 +1,12 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="signature">
+  <view class="handBtn">
+    <view class="delBtn" bindtap="retDraw">清除</view>
+    <view class="subBtn" bindtap="previewCanvasImg">确定</view>
+  </view>
+  <view class="handCenter">
+    <canvas class="handWriting" disable-scroll="true" bindtouchstart="uploadScaleStart" bindtouchmove="uploadScaleMove"
+      bindtouchend="uploadScaleEnd" bindtap="mouseDown" canvas-id="handWriting">
+    </canvas>
+  </view>
+</view>

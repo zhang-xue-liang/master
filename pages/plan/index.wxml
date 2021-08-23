@@ -1,0 +1,45 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<wxs module="util1">
+  var sub = function(val) {
+  return val.substring(0, 10)
+  }
+  module.exports={
+   sub:sub
+  }
+</wxs>
+<wxs module="util2">
+  var sub = function(val) {
+    return val.substring(16, 11)
+  }
+  module.exports={
+   sub:sub
+  }
+</wxs>
+<view class="plan">
+  <view class="main">
+    <view class="tit">处理进度</view>
+    <view class="wrap">
+      
+      <view class="item {{key === 0?'first':'' }} {{key === 1?'second':'' }} {{key === length?'last':'' }}"  wx:for="{{logDetail}}" wx:for-index="key" wx:for-item="item">
+        <view class="left">
+          <view>{{util1.sub(item.createTime)}}</view>
+          <view>{{util2.sub(item.createTime)}}</view>
+        </view>
+        <view class="center">
+          <view class="cricle">
+            <view></view>
+          </view>
+          <view class="line-top"></view>
+          <view class="line-bot"></view>
+        </view>
+        <view class="right">
+          <view>{{item.content}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="bot">
+    <view bindtap="shuaxin">刷新</view>
+    <view bindtap="toNote">备注</view>
+  </view>
+</view>

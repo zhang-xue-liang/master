@@ -1,0 +1,94 @@
+.goodInfo-warp{
+  padding: 32rpx 28rpx;
+}
+.goodInfo-warp .good-name{
+  font-family: 'PingFang SC Regular';
+  line-height: 40rpx;
+  font-size: 30rpx;
+  margin-bottom:22rpx; 
+}
+.goodInfo-warp .good-price{
+  height: 148rpx;
+}
+.goodInfo-warp .good-price .left{
+  float: left;
+  width: 70%;
+  border-right: 1px solid #999;
+  color: #004b22;
+}
+.goodInfo-warp .good-price .left .price-cash{
+  height: 42rpx;
+  margin-bottom: 32rpx;
+}
+.goodInfo-warp .good-price .left .price-cash view:nth-child(1){
+  height: 26rpx;
+  width: 40rpx;
+  float: left;
+  margin-top: 8rpx;
+  margin-right: 10rpx;
+  font-size: 34rpx;
+  line-height: 26rpx;
+  text-align: center
+}
+.goodInfo-warp .good-price .left .price-cash view:nth-child(2){
+  height: 21px;
+  float: left;
+  margin-right: 18rpx;
+  font-size: 54rpx;
+  line-height: 35rpx;
+}
+.goodInfo-warp .good-price .left .price-cash view:nth-child(3){
+  height: 36rpx;
+  float: left;
+  margin-top: 8rpx;
+  font-size: 30rpx;
+  line-height: 36rpx;
+}
+
+.goodInfo-warp .good-price .left .price-point{
+  height: 42rpx;
+  margin-bottom: 32rpx;
+}
+.goodInfo-warp .good-price .left .price-point view:nth-child(1){
+  height: 26rpx;
+  width: 40rpx;
+  float: left;
+  margin-top: 8rpx;
+  margin-right: 10rpx;
+  font-size: 34rpx;
+  line-height: 26rpx;
+  text-align: center
+}
+.goodInfo-warp .good-price .left .price-point view:nth-child(2){
+  height: 21px;
+  float: left;
+  margin-right: 18rpx;
+  font-size: 54rpx;
+  line-height: 35rpx;
+}
+.goodInfo-warp .good-price .left .price-point view:nth-child(3){
+  height: 36rpx;
+  float: left;
+  margin-top: 8rpx;
+  font-size: 30rpx;
+  line-height: 36rpx;
+}
+.goodInfo-warp .good-price .right{
+  float: right;
+  width: 29%;
+}
+.goodInfo-warp .good-price .right view:nth-child(1){
+  line-height: 30rpx;
+  font-size: 30rpx;
+  margin-right: 10rpx;
+  text-align: center;
+  margin-bottom: 20rpx;
+  margin-top: 18rpx;
+  color: #999;
+}
+.goodInfo-warp .good-price .right view:nth-child(2){
+  line-height: 30rpx;
+  font-size: 26rpx;
+  text-align: center;
+  color: #999;
+}

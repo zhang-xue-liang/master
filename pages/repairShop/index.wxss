@@ -1,0 +1,109 @@
+.repair{
+  min-height: 100%;
+  background: rgba(249, 249, 249, 1);
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.repair .head{
+  display: flex;
+  align-items: center;
+  background: rgba(242, 242, 242, 1);
+  padding-left: 24rpx;
+  margin-bottom: 30rpx;
+  height: 62rpx;
+  border-radius: 31rpx;
+}
+.repair .head image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 16rpx;
+}
+.repair .head input{
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.repair .list .item{
+  display: flex;
+  margin-bottom: 30rpx;
+  background: #fff;
+  border-radius: 30rpx;
+  padding: 20rpx;
+}
+.repair .list .item .left{
+  margin-right: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.repair .list .item .left image{
+  width: 150rpx;
+  height: 150rpx;
+}
+.repair .list .item .right{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.repair .list .item .right .top{
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+.repair .list .item .right .center{
+  display: flex;
+}
+.repair .list .item .right .center .binhao{
+  display: flex;
+  margin-right: 30rpx;
+}
+.repair .list .item .right .center .binhao view{
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.repair .list .item .right .center .guige{
+  display: flex;
+}
+.repair .list .item .right .center .guige view{
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.repair .list .item .right .bot{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.repair .list .item .right .bot .le{
+  display: flex;
+}
+.repair .list .item .right .bot .le .danwei{
+  display: flex;
+  margin-right: 30rpx;
+}
+.repair .list .item .right .bot .le .danwei view{
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.repair .list .item .right .bot .le .kucun{
+  display: flex;
+}
+.repair .list .item .right .bot .le .kucun view{
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.repair .list .item .right .bot .ri{
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #E52222;
+}

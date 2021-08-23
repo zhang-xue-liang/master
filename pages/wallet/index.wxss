@@ -1,0 +1,245 @@
+.wallet{
+  height: 100%;
+  background: rgba(249, 249, 249, 1);
+}
+.wallet .head{
+  height: 230rpx;
+  padding: 35rpx 136rpx 31rpx 112rpx;
+  background: linear-gradient(0deg, #FC7431 0%, #FF9147 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wallet .head .main{
+  display: flex;
+  justify-content: space-between;
+}
+.wallet .head .main .left view:nth-child(1){
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+.wallet .head .main .left view:nth-child(2){
+  font-size: 48rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+}
+.wallet .head .main .right view:nth-child(1){
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+.wallet .head .main .right view:nth-child(2){
+  font-size: 48rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+}
+.wallet .head .bot{
+  display: flex;
+  justify-content: center;
+}
+.wallet .head .bot view{
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FC7A35;
+  height: 52rpx;
+  line-height: 52rpx;
+  padding: 0 52rpx;
+  background: #fff;
+  border-radius: 26rpx;
+}
+.wallet .tab{
+  height: 88rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  background: #fff;
+  line-height: 88rpx;
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  margin-bottom: 30rpx;
+}
+.wallet .tab .active{
+  color: #FC7431;
+  position: relative;
+}
+.wallet .tab .active .border{
+  position: absolute;
+  left: 0;
+  bottom: 10rpx;
+  width: 100%;
+  height: 3px;
+  display: flex;
+  justify-content: center;
+}
+.wallet .tab .active .border view{
+  width: 52rpx;
+  height: 3px;
+  border-radius: 3rpx;
+  background: #FC7431;
+}
+.wallet .list{
+  background: #fff;
+  padding: 0 30rpx;
+}
+.wallet .list .income-item{
+  padding: 30rpx 0;
+  border-bottom: 1px solid #eee;
+}
+.wallet .list .income-item .top{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+}
+.wallet .list .income-item .top view:nth-child(1){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+}
+.wallet .list .income-item .top view:nth-child(2){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+}
+.wallet .list .income-item .bot{
+  display: flex;
+  justify-content: space-between;
+}
+.wallet .list .income-item .bot view:nth-child(1){
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.wallet .list .income-item .bot view:nth-child(2){
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+
+.wallet .list .withdrawal-item{
+  padding: 30rpx 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+}
+.wallet .list .withdrawal-item .left{
+  margin-right: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.wallet .list .withdrawal-item .left image{
+  width: 72rpx;
+  height: 72rpx;
+}
+.wallet .list .withdrawal-item .center{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wallet .list .withdrawal-item .center view:nth-child(1){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+}
+.wallet .list .withdrawal-item .center view:nth-child(2){
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.wallet .list .withdrawal-item .right{
+  margin-left: auto;
+}
+.wallet .list .withdrawal-item .right view:nth-child(1){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+}
+.wallet .list .withdrawal-item .right view:nth-child(2){
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.wallet .list .withdrawal-item .right .withdrawalinig{
+  color: #FF8F58 !important;
+}
+
+
+
+.wallet .list .item{
+  padding: 30rpx 0;
+  border-bottom: 1px solid #eee;
+}
+.wallet .list .item .top{
+  display: flex;
+  justify-content: space-between;
+}
+.wallet .list .item .top view:nth-child(1){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+}
+.wallet .list .item .top view:nth-child(2){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+}
+.wallet .list .item .center{
+  display: flex;
+  margin: 24rpx 0 20rpx 0;
+}
+.wallet .list .item .center .left{
+  margin-right: 30rpx;
+  display: flex;
+}
+.wallet .list .item .center .left view:nth-child(1){
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.wallet .list .item .center .left view:nth-child(2){
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666;
+}
+.wallet .list .item .center .right{
+  display: flex;
+}
+.wallet .list .item .center .right view:nth-child(1){
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.wallet .list .item .center .right view:nth-child(2){
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666;
+}
+.wallet .list .item .bot{
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+

@@ -1,0 +1,10 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="login">
+  <view class="top">
+    <image src="/images/login-tit.png"></image>
+    <button class="btn" bindtap="login">微信用户一键登录</button>
+  </view>
+  <view class="bot">
+    <image src="/images/logo.png"></image>
+  </view>
+</view>

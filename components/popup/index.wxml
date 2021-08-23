@@ -1,0 +1,74 @@
+<view wx:if='{{flag}}' catchtouchmove='ture'>
+  <view class='wrap {{wrapAnimate}}' style='background:rgba(0,0,0,0);' catchtouchmove='ture'></view>
+  <view catchtap='hideFrame' class='frame-wrapper {{frameAnimate}}' catchtouchmove='ture'>
+    <view catchtap='catchNone' class='frame'>
+      <!-- <view wx:if='{{popTitle}}' class='title-wrapper flex'>
+        <view>{{popTitle}}</view>
+        <image catchtap='hideFrame' src='/image/test/luhu.png' mode='widthFix'></image>
+      </view>
+      <slot></slot> -->
+      <!-- 商品信息 -->
+      <view class="good-Info">
+        <view class="left">
+          <image src="{{goodData.pic1}}"></image>
+        </view>
+        <view class="right">
+          <view class="skuname">{{goodData.skuName}}</view>
+          <view class="skuCashPrice">
+            <view class="price-left">{{goodData.price/100}}元</view>
+            <view class="stockNum-right">(库存{{goodData.stockNum}}件)</view>
+          </view>
+          <view class="maxPoint">
+            <text>最高支付积分：</text>
+            <text>{{goodData.maxScore}}积分</text>
+          </view>
+          <view class="maxPoint">
+            <text>最低支付积分：</text>
+            <text>{{goodData.minScore}}积分</text>
+          </view>
+        </view>
+      </view>
+      <!-- 规格组、规格值 -->
+      <view class="specWrap">
+        <view class="item" wx:for="{{specsList}}" wx:for-item="item" wx:key="key">
+          <view class="head">
+            <text>{{item.sgName}}</text>
+            <text>请选择{{item.sgName}}</text>
+          </view>
+          <view class="specList">
+            <view bindtap="changeSpecs" data-item="{{ite}}" data-parentId="{{item.groupId}}" class="specItem {{ ite.status == 1 ? 'actSpecItem' : ''}}" wx:for="{{item.specsList}}" wx:for-item="ite" wx:key="index">
+              {{ite.name}}
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 加减数量和积分 -->
+      <view class="numPoint">
+        <view class="numPoint-item num">
+          <view class="left">
+            <text>数</text>
+            <text>量：</text>
+          </view>
+          <view class="right">
+            <image src="/images/test/sub.png"></image>
+            <input type="number"></input>
+            <image src="/images/test/add.png"></image>
+          </view>
+        </view>
+        <view class="numPoint-item point">
+          <view class="left">
+            <text>积</text>
+            <text>分</text>
+            <text>购：</text>
+          </view>
+          <view class="right">
+            <image src="/images/test/sub.png"></image>
+            <input type="number"></input>
+            <image src="/images/test/add.png"></image>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>

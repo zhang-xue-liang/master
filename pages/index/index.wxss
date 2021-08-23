@@ -1,0 +1,99 @@
+.index-container{
+  background: rgba(249, 249, 249, 1);
+  min-height: 100%;
+  box-sizing: border-box;
+  margin-bottom: 100rpx;
+}
+.index-container .location{
+  height: 88rpx;
+  padding: 0 30rpx;
+  display: flex;
+  background: #fff;
+  align-items: center;
+}
+.index-container .location view:nth-child(1){
+  font-size: 30rpx;
+  color: #666;
+  margin-right: 10rpx;
+}
+.index-container .location view:nth-child(2){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+}
+.index-container .order-list{
+  background: rgba(249, 249, 249, 1);
+  padding: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.index-container .order-list .item{
+  background-color: #fff;
+  width: 690rpx;
+  border-radius: 30rpx;
+  margin-bottom: 30rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.index-container .order-list .item .top{
+  padding: 42rpx 0;
+  border-bottom: 1px solid rgba(238, 238, 238, 1);
+  display: flex;
+  justify-content: space-between;
+}
+.index-container .order-list .item .top view:nth-child(1){
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+}
+.index-container .order-list .item .top view:nth-child(2){
+  width: 110rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+  text-align: center;
+  border-radius: 23rpx;
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+}
+.index-container .order-list .item .top .accepted{
+  background: rgba(252, 116, 49, .1);
+  color: rgba(252, 116, 49, 1);
+}
+.index-container .order-list .item .top .accepting{
+  background: rgba(11, 190, 78, .1);
+  color: rgba(11, 190, 78, 1);
+}
+.index-container .order-list .item .top .ongoing{
+  background: rgba(49, 202, 252, .1);
+  color: rgba(49, 202, 252, 1);
+}
+.index-container .order-list .item .top .wanc{
+  background: #999;
+  color: #000;
+}
+.index-container .order-list .item .center {
+  border-bottom: 1px solid rgba(238, 238, 238, 1);
+  padding-top: 30rpx;
+}
+.index-container .order-list .item .center view{
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  padding-bottom: 30rpx;
+}
+.index-container .order-list .item .bot{
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  padding: 30rpx 0;
+  text-align: right;
+}
+.index-container .order-list .item .bot span{
+  color: rgba(232, 0, 1, 1);
+}

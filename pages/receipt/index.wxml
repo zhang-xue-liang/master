@@ -1,0 +1,103 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="receipt">
+  <view class="attachment">
+    <view class="title">
+      <view>回执附件</view>
+      <view>上传图片，最多三张，</view>
+    </view>
+    <view class="uplod-wrap">
+      <view class="uplod-img" wx:for="{{uploadImgList}}" wx:for-item="image" wx:for-index="key" wx:key="key">
+        <image mode="aspectFitf" src="{{image}}" data-src="{{image}}" bindtap="previewUplodImg"></image>
+        <view class="bfont icon-close" bindtap="delImg" data-id="{{key}}"></view>
+      </view>
+      <view class="uplod" bindtap="uplodImg" wx:if="{{uploadImgList.length<3}}">
+        <view class="bfont icon-uplod"></view>
+        <view>上传图片</view>
+      </view>
+    </view>
+    <view class="sample">
+      <view class="tit">示例图</view>
+      <view class="previewimg">
+        <image wx:for="{{imgalist}}" wx:for-item="image" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+      </view>
+    </view>
+  </view>
+  <view class="spareparts">
+    <view class="top">
+      <view class="title">
+        <view>备件</view>
+        <view>请确认使用的备件</view>
+      </view>
+      <!-- <view class="add" bindtap="toChoose">
+        <view class="bfont icon-uplod"></view>
+        <view>选择</view>
+      </view> -->
+    </view>
+    <view class="main">
+      <view class="item-wrap" wx:for="{{bjList}}" wx:for-item="ite" wx:for-index="key1" wx:key="key">
+        <view class="item" wx:for="{{ite.list}}" wx:for-item="item" wx:for-index="key2" wx:key="key">
+          <view class="bfont icon-close" bindtap="delBJ" data-key1="{{key1}}" data-key2="{{key2}}"></view>
+          <view class="left">
+            <view class="name">{{item.name}}</view>
+            <view class="info">
+              <view>单价：{{item.priceValue}}元</view>
+              <view>数量：{{item.number}}个</view>
+            </view>
+          </view>
+          <view class="right">
+            <view class="price">￥{{item.priceValue}}</view>
+            <view class="ipt">
+              <!-- <view bindtap="cutNUm" data-id="{{key}}">——</view>
+              <input type="text" model:value="{{item.number}}"/>
+              <view bindtap="addNUm" data-id="{{key}}">+</view> -->
+              <view bindtap="cutNUm" data-key1="{{key1}}" data-key2="{{key2}}">——</view>
+              <input disabled="true" type="text" model:value="{{item.number}}"/>
+              <view data-id="{{key}}">+</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="bottom">
+      <view class="discount">
+        <view class="left">折扣费用</view>
+        <view class="right">
+          <input type="number" disabled="{{bjList.length <= 0}}" bindchange="discountFeeChange" model:value="{{discountFee}}"/>
+          <view>元</view>
+        </view>
+      </view>
+      <view class="all">
+        <view class="left">总计</view>
+        <view class="right">{{totalFee}}元</view>
+      </view>
+    </view>
+  </view>
+  <view class="signature">
+    <view class="title">客户签名</view>
+    <view class="main" bindtap="toSignature">
+      <image src="{{singPic}}"></image>
+    </view>
+  </view>
+  <view class="btn" bindtap="choosePay">{{btntip}}</view> 
+  <van-popup show="{{ show }}" position="bottom"  bind:close="onClose" round="{{true}}">
+    <view class="pop">
+      <view class="tip">选择支付方式</view>
+      <view class="way">
+        <view class="left" bindtap="pay" data-id="1">
+          <image src="../../images/alipay.png"></image>
+          <view>支付宝</view>
+        </view>
+        <view class="right" bindtap="pay" data-id="2">
+          <image src="../../images/wx.jpg"></image>
+          <view>微信</view>
+        </view>
+      </view>
+    </view>
+  </van-popup>
+
+  <van-popup show="{{ showPay }}" bind:close="onPayClose">
+    <view class="payWrap">
+      <canvas class='canvas' canvas-id='canvas' style="width: 220px; height: 220px"></canvas>
+    </view>
+  </van-popup>
+</view>

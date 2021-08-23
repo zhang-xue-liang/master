@@ -1,0 +1,14 @@
+.homeList-empty{
+  width: 100%;
+  height: 500rpx;
+}
+.homeList-empty image{
+  width: 200rpx;
+  height: 234rpx;
+  display: block;
+  margin: 100rpx auto;
+}
+.homeList-empty .empty-text{
+  text-align: center;
+  font-size: 28rpx;
+}

@@ -1,0 +1,30 @@
+<wxs src="../../utils/filter.wxs"  module="dateFir"></wxs>
+<view class="knowageDetail">
+  <view class="top"></view>
+  <view class="main">
+    <view class="list">
+      <view class="title">
+        <view class="bfont icon_fujian"></view>
+        <view>附件列表</view>
+      </view>
+      <view class="item" wx:for="{{attach}}" wx:for-index="key" wx:for-item="item" bindtap="downlod" data-url="{{item.url}}">{{item.fileName}}</view>
+    </view>
+    <rich-text nodes="{{detail}}"></rich-text>
+  </view>
+  <view class="pop">
+    <van-overlay show="{{ loading }}">
+      <view class="loading">
+        <van-loading size="28px" type="spinner" vertical color="#FC7431">下载中...</van-loading>
+      </view>
+    </van-overlay>
+  </view>
+  <van-popup show="{{ show }}" bind:close="onClose" round="{{true}}">
+    <view class="pop-wrap">
+      <view class="txt">是否打开文件？</view>
+      <view class="bots">
+        <view bindtap="onClose">取消</view>
+        <view bindtap="openFile">确定</view>
+      </view>
+    </view>
+  </van-popup>
+</view>

@@ -1,0 +1,43 @@
+<view>
+  <van-popup show="{{ show }}" position="right" custom-style="width: 68%;height: 100%" bind:close="onClose">
+    <view class="screenPop">
+      <view class="title">
+        <view>筛选</view>
+        <view bindtap="onClose">X</view>
+      </view>
+      <view class="main">
+        <view class="item">
+          <view class="tit">状态</view>
+          <view class="list">
+            <view class="{{statusId == item.id ? 'active': ''}}" bindtap="changeStatus" data-id="{{item.id}}" wx:for="{{statusList}}" wx:for-index="id" wx:for-item="item" wx:key="id">
+              {{item.name}}
+            </view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="tit">计划时间</view>
+          <view class="list">
+            <view class="{{timeId == item.id ? 'active': ''}}" bindtap="changeItem" data-id="{{item.id}}" wx:for="{{timeList}}" wx:for-index="id" wx:for-item="item" wx:key="id">
+              {{item.name}}
+            </view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="tit">类型</view>
+          <view class="list">
+            <view class="{{typeId == item.id ? 'active': ''}}" bindtap="changeType" data-id="{{item.id}}" wx:for="{{typeList}}" wx:for-index="id" wx:for-item="item" wx:key="id">
+              {{item.name}}
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="btn">
+        <view bindtap="toSearch">更多筛选条件></view>     
+      </view>
+      <view class="bot">
+        <view bindtap="reSet">重置</view>
+        <view bindtap="confirm">确定</view>
+      </view>
+    </view>
+  </van-popup>
+</view>

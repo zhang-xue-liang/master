@@ -1,0 +1,333 @@
+<wxs src="../../utils/filter.wxs" module="dateFir"></wxs>
+<!-- <wxs module="util1">
+  var sub = function(id) {
+    bJtype.find((item) => {
+      if(item.id === id){
+        return item.name
+      }
+    }) 
+  }
+  module.exports={
+   sub:sub
+  }
+</wxs> -->
+<view class="order-detail">
+  <view class="top">
+    <view class="state">
+      {{dateFir.workerAcceptTypeFilter(detail.workerAcceptType)}}
+    </view>
+    <view class="plantime">
+      <view>计划时间：{{detail.planTime}}</view>
+      <view wx:if="{{detail.workerAcceptType === 1}}" class="bfont icon-edit" bindtap="editTime"></view>
+    </view>
+  </view>
+  <view class="information">
+    <view class="title">客户信息</view>
+    <view class="main">
+      <view class="left">
+        <view class="bfont icon-location"></view>
+      </view>
+      <view class="right">
+        <view class="name">
+          <view>{{detail.clientName}}</view>
+          <view>{{detail.clientMobile}}</view>
+        </view>
+        <view class="address">
+          {{detail.address}}
+        </view>
+      </view>
+    </view>
+    <view class="bot">
+      <view class="navigation" bindtap="openLacation">
+        <view class="bfont icon-navigation"></view>
+        <view data-latitude="121" data-longitude="21">导航</view>
+      </view>
+      <view class="phone" bindtap="call" data-phone="{{detail.clientMobile}}">
+        <view class="bfont icon-phone"></view>
+        <view>联系客户</view>
+      </view>
+    </view>
+  </view>
+  <view class="schedule">
+    <view class="title">处理进度</view>
+    <view class="main" bindtap="toPlan">
+      <view class="left">
+        <view>{{logDetail.content}}</view>
+        <view>{{logDetail.createTime}}</view>
+      </view>
+      <view class="bfont icon-arrowRight"></view>
+    </view>
+  </view>
+  <van-sticky offset-top="{{ 0 }}">
+    <view class="detail-tab">
+      <view class="{{activeId===item.id?'active':''}}" wx:for="{{tab_data}}" wx:for-index="id" wx:for-item="item" wx:key="id" bindtap="changeStatus" data-id="{{item.id}}">{{item.name}}</view>
+    </view>
+  </van-sticky>
+  <view class="detail-main">
+    <view class="detail-list" wx:if="{{activeId === 1}}">
+      <view class="item">
+        <view class="left">工单编号</view>
+        <view class="right">{{detail.code}}</view>
+      </view>
+      <view class="item">
+        <view class="left">工单类型</view>
+        <view class="right">{{dateFir.serviceType(detail.serviceType)}}</view>
+      </view>
+      <view class="item">
+        <view class="left">产品</view>
+        <view class="right">{{detail.product}}</view>
+      </view>
+      <view class="item">
+        <view class="left">服务类型</view>
+        <view class="right">{{dateFir.serviceContent(detail.serviceContent) }}</view>
+      </view>
+      <view class="item">
+        <view class="left">服务内容</view>
+        <view class="right">{{detail.serviceType===0? '安装服务':'维修服务'}}</view>
+      </view>
+      <view class="item">
+        <view class="left">情况说明</view>
+        <view class="right">{{detail.eventDesc}}</view>
+      </view>
+      <view class="item">
+        <view class="left">图片/视频</view>
+        <view class="right">
+          <image wx:if="{{detail.video}}" src="../../images/video.png" bindtap="playVideo"></image>
+          <image wx:if="{{!detail.video}}" wx:for="{{pictures || []}}" wx:key="{{index}}" src="{{item}}" data-src="{{item}}" bindtap="previewImage"></image>
+        </view>
+      </view>
+      <view class="item">
+        <view class="left">创建人</view>
+        <view class="right">{{detail.creatorName}}</view>
+      </view>
+      <view class="item">
+        <view class="left">创建时间</view>
+        <view class="right">{{detail.createTime}}</view>
+      </view>
+      <view class="item">
+        <view class="left">安装师傅</view>
+        <view class="right">{{detail.workerName}}</view>
+      </view>
+      <view class="item">
+        <view class="left">师傅手机号</view>
+        <view class="right">{{detail.workerMobile}}</view>
+      </view>
+    </view>
+    <view class="detail-list" wx:if="{{activeId === 2}}">
+      <view class="item">
+        <view class="left">产品型号</view>
+        <view class="right">{{canpin.model}}</view>
+      </view>
+      <view class="item">
+        <view class="left">外观颜色</view>
+        <view class="right">{{canpin.color}}</view>
+      </view>
+      <view class="item">
+        <view class="left">开门方向</view>
+        <view class="right">{{canpin.openDirect}}</view>
+      </view>
+      <view class="item">
+        <view class="left">锁芯长度</view>
+        <view class="right">{{canpin.lockLength}}</view>
+      </view>
+      <view class="item">
+        <view class="left">有无天地钩</view>
+        <view class="right">{{canpin.hook}}</view>
+      </view>
+      <view class="item">
+        <view class="left">导向片尺寸</view>
+        <view class="right">{{canpin.guideSize}}</view>
+      </view>
+      <view class="item">
+        <view class="left">锁体类型</view>
+        <view class="right">{{canpin.lockType}}</view>
+      </view>
+      <view class="item">
+        <view class="left">购买日期</view>
+        <view class="right">{{canpin.buyTime}}</view>
+      </view>
+      <view class="item">
+        <view class="left">销售人员</view>
+        <view class="right">{{canpin.saleName}}</view>
+      </view>
+      <view class="item">
+        <view class="left">平台</view>
+        <view class="right">{{canpin.platform}}</view>
+      </view>
+      <view class="item">
+        <view class="left">发货日期</view>
+        <view class="right">{{canpin.sendTime}}</view>
+      </view>
+      <view class="item">
+        <view class="left">安装师傅</view>
+        <view class="right">{{canpin.installWorker}}</view>
+      </view>
+      <view class="item">
+        <view class="left">安装日期</view>
+        <view class="right">{{canpin.installTime}}</view>
+      </view>
+      <view class="item">
+        <view class="left">保修到期</view>
+        <view class="right">{{canpin.guaranteeTime}}</view>
+      </view>
+      <view class="item">
+        <view class="left">订单编号</view>
+        <view class="right">{{canpin.orderNo}}</view>
+      </view>
+      <view class="item">
+        <view class="left">收货地址</view>
+        <view class="right">{{canpin.receiveAddr}}</view>
+      </view>
+    </view>
+    <view class="beijian"  wx:for="{{beijian}}" wx:for-index="key" wx:for-item="item" wx:if="{{activeId === 3 && data.detail.workerAcceptType !=2}}">
+      <view class="item" wx:for="{{item.list}}" wx:for-index="key" wx:for-item="ite">
+        <view class="ite">
+          <view class="left">备件名称</view>
+          <view class="right">{{ite.name}}</view>
+        </view>
+        <view class="ite">
+          <view class="left">编号</view>
+          <view class="right">{{ite.sparePartsCode}}</view>
+        </view>
+        <view class="ite">
+          <view class="left">类别</view>
+          <view class="right">{{ite.sparePartsTypeId}}</view>
+        </view>
+        <view class="ite">
+          <view class="left">单价</view>
+          <view class="right">{{ite.priceValue}}</view>
+        </view>
+        <view class="ite">
+          <view class="left">数量</view>
+          <view class="right">{{ite.number}}</view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="ite">
+          <view class="left">小计</view>
+          <view class="right">{{item.price}}</view>
+        </view>
+        <view class="ite">
+          <view class="left">快递</view>
+          <view class="right">{{item.expressName || '-'}}</view>
+        </view>
+        <view class="ite">
+          <view class="left">快递单号</view>
+          <view class="right">{{item.expressCode || '-'}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="huizi" wx:if="{{activeId === 4&&data.detail.workerAcceptType != 2}}">
+      <view class="fujian">
+        <view class="to">回执附件</view>
+        <view class="nam">
+          <image wx:for="{{hzPic}}" wx:for-index="key" wx:for-item="item" src="{{item}}" bindtap="hzPreviewImage"></image>
+        </view>
+      </view>
+      <view class="bj">
+        <view class="to">备件</view>
+        <view class="boto">
+          <view class="bji" wx:for="{{huizhi.list}}" wx:for-index="key" wx:for-item="item">
+            <view class="nam">
+              <view>{{item.name}}</view>
+              <view>￥{{item.priceValue}}</view>
+            </view>
+            <view class="num">
+              <view class="sk">
+                <view>编号：{{item.sparePartsCode}}</view>
+                <view>类别：{{item.sparePartsTypeId}}</view>
+              </view>
+              <view class="sl">×{{item.number}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="left">服务内容</view>
+        <view class="right">
+          <view>{{huizhi.content}}</view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="left">折扣费用</view>
+        <view class="right">
+          <view>{{huizhi.discountFee}}</view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="left">总计</view>
+        <view class="right">
+          <view>{{huizhi.totalFee}}</view>
+        </view>
+      </view>
+      <view class="sig">
+        <view class="t">客户签名</view>
+        <view class="pic">
+          <image src="{{huizhi.customSignature}}"></image>
+        </view>
+      </view>
+    </view>
+    <view class="pingjia" wx:if="{{activeId === 5}}">
+      <view class="pingjia-wrap">
+        <view class="xing">
+          <image wx:for="{{detail.satisfaction}}" wx:for-index="key" src="../../images/xing.png"></image>
+        </view>
+        <view class="tip">评分：{{detail.satisfaction}}.0</view>
+        <view class="txt">未发表任何意见</view>
+      </view>
+    </view>
+  </view>
+  <view class="btn">
+    <view class="jvjue" bindtap="jvjue" wx:if="{{detail.workerAcceptType ===0 || detail.workerAcceptType ===null}}">拒绝</view>
+    <view class="jies" bindtap="jiesou" wx:if="{{detail.workerAcceptType ===0 || detail.workerAcceptType ===null}}">接受</view>
+    <view class="stbtn" wx:if="{{detail.workerAcceptType ===1}}" bindtap="beginWork">开始工作</view>
+    <view class="stbtn" wx:if="{{detail.workerAcceptType ===2}}" bindtap="toCreatHz">上传回执</view>
+  </view>
+
+  <view class="pop">
+    <van-popup show="{{ show }}" position="bottom"  bind:close="onClose" round="{{true}}">
+      <view class="pop-main">
+        <view class="hea">
+          <view class="tit">
+            <view>修改计划上门时间</view>
+            <view bindtap="next" wx:if="{{type==='TIME1'}}">下一步</view>
+            <view bindtap="previous" wx:if="{{type==='TIME2'}}">上一步</view>
+          </view>
+          <view class="bo">
+            <view>原计划时间：</view>
+            <view>{{detail.planTime}}</view>
+          </view>
+        </view>
+        <view class="TIME1" wx:if="{{type === 'TIME1'}}">
+          <van-datetime-picker
+            type="date"
+            show-toolbar="{{false}}"
+            value="{{ currData }}"
+            formatter="{{ formatterData }}"
+            bind:input="confirmData"
+            bind:cancel="cancelData"
+          />
+        </view>
+        <view class="TIME2" wx:if="{{type === 'TIME2'}}">
+          <van-datetime-picker
+            type="time"
+            show-toolbar="{{false}}"
+            value="{{ currTime }}"
+           
+            bind:input="confirmTime"
+            bind:cancel="cancelTime"
+          />
+        </view>
+        <view class="btns" bindtap="confimEditPlanTime" wx:if="{{type === 'TIME2'}}">
+          确定修改
+        </view>
+      </view>
+    </van-popup>
+  </view>
+
+  <van-popup show="{{ videoPop }}" bind:close="onVideoClose" position="bottom">
+    <view class="pop-v">
+      <video src="{{video}}" enable-progress-gesture="true"></video>
+    </view>
+  </van-popup>
+</view>

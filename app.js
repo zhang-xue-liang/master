@@ -5,7 +5,7 @@ App({
   onLaunch: function() {
     this.autoUpdate()
     /**
-     * 初次加载判断网络情况
+     * 初次加载判断网络情况12345
      * 无网络状态下根据实际情况进行调整
      */
     wx.getNetworkType({

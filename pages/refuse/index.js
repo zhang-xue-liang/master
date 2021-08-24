@@ -35,7 +35,7 @@ Page({
         })
       } else {
         wx.showToast({
-          title: response.msg,
+          title: '操作失败',
           icon: 'none',
           duration: 2000
         })

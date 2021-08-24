@@ -203,12 +203,42 @@
   box-sizing: border-box;
   margin-bottom: 30rpx;
 }
+.order-detail .detail-main .detail-list .parameter{
+
+}
+.order-detail .detail-main .detail-list .parameter .titl{
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 30rpx;
+}
+.order-detail .detail-main .detail-list .parameter .wrap{
+  display: flex;
+  background: #F7F7F7;
+  border-radius: 10rpx;
+  padding: 20rpx 64rpx 20rpx 19rpx;
+  flex-wrap: wrap;
+}
+.order-detail .detail-main .detail-list .parameter .wrap view{
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+  padding-right: 20rpx;
+  border-right: 1px solid #CCCCCC;
+  margin-bottom: 31rpx;
+  margin-right: 20rpx;
+}
 .order-detail .detail-main .detail-list .item{
   padding: 40rpx 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgba(238, 238, 238, 1);
+}
+.order-detail .detail-main .detail-list .born{
+  border: none;
 }
 .order-detail .detail-main .detail-list .item:last-child{
   border: none;

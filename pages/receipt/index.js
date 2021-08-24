@@ -209,69 +209,76 @@ Page({
   },
   // 无备件创建回执
   creathuizhi(){
-    const data = {
-      content: Number(this.data.order.content),
-      customId: this.data.order.clientId,
-      customSignature: this.data.singPic,
-      enclosure: this.data.uploadImgList.join(','),
-      saleSparePartsOrderDTO: {
-        clientName: this.data.order.clientName,
-        clientTelephone: this.data.order.clientTelephone,
-        receiptId: this.data.order.receiptId,
+    if(this.data.uploadImgList.length <3){
+      error('附件需3张图片')
+    } else {
+      const data = {
+        content: Number(this.data.order.content),
+        customId: this.data.order.clientId,
+        customSignature: this.data.singPic,
+        enclosure: this.data.uploadImgList.join(','),
+        saleSparePartsOrderDTO: {
+          clientName: this.data.order.clientName,
+          clientTelephone: this.data.order.clientTelephone,
+          receiptId: this.data.order.receiptId,
+          workOrderCode: this.data.order.workOrderCode,
+        },
         workOrderCode: this.data.order.workOrderCode,
-      },
-      workOrderCode: this.data.order.workOrderCode,
-      
-    }
-    WXAPI.creatHZ(data).then(response => {
-      if(response.code===0){
-        wx.navigateTo({
-          url: '/pages/index/index'
-        })
-      } else {
-        error(response.msg)
+        
       }
-      
-    })
+      WXAPI.creatHZ(data).then(response => {
+        if(response.code===0){
+          wx.navigateTo({
+            url: '/pages/orderDetail/index?code=' + this.data.order.workOrderCode + '&workOrderId=' + this.data.order.receiptId,
+          })
+        } else {
+          error(response.msg)
+        }
+      })
+    }
   },
   // 支付
   pay(e){
-    const data = {
-      content: Number(this.data.order.content),
-      customId: this.data.order.clientId,
-      customSignature: this.data.singPic,
-      discountFee: this.data.discountFee,
-      enclosure: this.data.uploadImgList.join(','),
-      saleSparePartsOrderDTO: {
-        clientName: this.data.order.clientName,
-        clientTelephone: this.data.order.clientTelephone,
-        list: this.data.apiList,
-        price: this.data.totalFee,
-        receiptId: this.data.order.receiptId,
+    console.log(this.data.uploadImgList)
+    if(this.data.uploadImgList.length <3){
+      error('附件需3张图片')
+    } else {
+      const data = {
+        content: Number(this.data.order.content),
+        customId: this.data.order.clientId,
+        customSignature: this.data.singPic,
+        discountFee: this.data.discountFee,
+        enclosure: this.data.uploadImgList.join(','),
+        saleSparePartsOrderDTO: {
+          clientName: this.data.order.clientName,
+          clientTelephone: this.data.order.clientTelephone,
+          list: this.data.apiList,
+          price: this.data.totalFee,
+          receiptId: this.data.order.receiptId,
+          workOrderCode: this.data.order.workOrderCode,
+        },
+        settlementMode: Number(e.currentTarget.dataset.id),
+        settlementType: 0,
+        totalFee: this.data.totalFee,
         workOrderCode: this.data.order.workOrderCode,
-      },
-      settlementMode: Number(e.currentTarget.dataset.id),
-      settlementType: 0,
-      totalFee: this.data.totalFee,
-      workOrderCode: this.data.order.workOrderCode,
-      
-    }
-    WXAPI.creatHZ(data).then(response => {
-      if(response.code===0){
-        var url = 'http://zxapi.xn--2qun03at5gw5o.top:9999/pay/goods/buy?amount=' + this.data.totalFee
-        + '&goodsOrderId=' + this.data.order.workOrderCode
-        + '&goodsName=备件订单'
-        + '&TENANT-ID=1'
-        console.log(url)
-        this.makeCode(url)
-        this.setData({
-          showPay: true
-        })
-      } else {
-        error(response.msg)
+        
       }
-      
-    })
+      WXAPI.creatHZ(data).then(response => {
+        if(response.code===0){
+          var url = 'http://zxapi.xn--2qun03at5gw5o.top:9999/pay/goods/buy?amount=' + this.data.totalFee
+          + '&goodsOrderId=' + this.data.order.workOrderCode
+          + '&goodsName=备件订单'
+          + '&TENANT-ID=1'
+          console.log(url)
+          this.makeCode(url)
+          this.setData({
+            showPay: true
+          })
+        } else {
+          error(response.msg)
+        }
+      })
+    }
   },
   makeCode(url){
     drawQrcode({

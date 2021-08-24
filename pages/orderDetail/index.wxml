@@ -114,10 +114,22 @@
       </view>
     </view>
     <view class="detail-list" wx:if="{{activeId === 2}}">
-      <view class="item">
+      <view class="item born">
         <view class="left">产品型号</view>
         <view class="right">{{canpin.model}}</view>
       </view>
+      <view class="parameter">
+        <view class="titl">产品参数</view>
+        <view class="wrap">
+          <view>{{canpin.color}}</view>
+          <view>{{canpin.openDirect}}</view>
+          <view>{{canpin.lockLength}}</view>
+          <view>{{canpin.hook}}天地钩</view>
+          <view>{{canpin.guideSize}}</view>
+          <view>{{canpin.lockType}}</view>
+        </view>
+      </view>
+      <!-- 
       <view class="item">
         <view class="left">外观颜色</view>
         <view class="right">{{canpin.color}}</view>
@@ -141,7 +153,7 @@
       <view class="item">
         <view class="left">锁体类型</view>
         <view class="right">{{canpin.lockType}}</view>
-      </view>
+      </view> -->
       <view class="item">
         <view class="left">购买日期</view>
         <view class="right">{{canpin.buyTime}}</view>

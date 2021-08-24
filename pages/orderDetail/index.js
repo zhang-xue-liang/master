@@ -199,12 +199,12 @@ Page({
   },
   onVideoClose(){
     this.setData({
-      show: false
+      videoPop: false
     })
   },
   onClose(){
     this.setData({
-      videoPop: false
+      show: false
     })
   },
   // 确认选择年月日
